@@ -1,0 +1,125 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.topsvg {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    min-height: 70vh;
+    min-width: 120vh;
+    
+}
+.bottomsvg {
+    display: inline-block;
+    position: fixed;
+    top: 250px;
+    left: 0;
+    z-index: -1;
+    min-height: 70vh;
+    min-width: 120vh;
+}
+.container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.header_container {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    margin-top: 10px;
+}
+.homepage_header {
+    border: 2px black solid;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: black;
+}
+
+.homepage_buttons {
+    border: 2px black solid;
+    border-radius: 15px;
+    background-color: red;
+    color: white;
+    font-size: larger;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.homepage_logo {
+    line-height: 10px;
+    align-items: center;
+    color: white;
+}
+
+.form_container {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    font-size: x-large;
+    margin: 40px;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white; 
+}
+table {
+    text-align: center;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white; 
+}
+
+.checkbox_label {
+    font-size: large;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white; 
+}
+
+header {
+    width: 95%;
+    position: fixed;
+}
+
+.title {
+    padding-left: 46%;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white; 
+}
+.title_text {
+    padding-left: 35%;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white; 
+}
+.title_text2 {
+    padding-left: 44%;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white; 
+}

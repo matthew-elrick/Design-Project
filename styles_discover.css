@@ -1,0 +1,1520 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.topsvg {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    min-height: 70vh;
+    min-width: 120vh;
+    
+}
+.bottomsvg {
+    display: inline-block;
+    position: fixed;
+    top: 250px;
+    left: 0;
+    z-index: -1;
+    min-height: 70vh;
+    min-width: 120vh;
+}
+.container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.header_container {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    margin-top: 10px;
+}
+.homepage_header {
+    border: 4px black solid;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: black;
+}
+
+.homepage_buttons {
+    border: 2px black solid;
+    border-radius: 15px;
+    background-color: red;
+    color: white;
+    font-size: larger;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.homepage_logo {
+    line-height: 10px;
+    align-items: center;
+    color: white;
+}
+.title {
+    padding-left: 45%;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white; 
+}
+.title_text {
+    padding-left: 32%;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white; 
+}
+.title_text2 {
+    padding-left: 38.5%;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white; 
+}
+
+
+/* Dropdown container */
+.multipleSelection {
+    width: 300px;
+    position: relative;
+    margin: 20px;
+}
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#colorCheckBoxes {
+    display: none;
+    border: 1px solid #ccc;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#colorCheckBoxes label {
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#colorCheckBoxes label:hover {
+    background-color: #f0f0f0;
+}
+
+#imagesContainer img {
+    display: inline-block;
+    margin: 10px;
+    width: auto;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.imageContainer {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    min-height: 300px;
+    background-color: #ffebcd;
+}
+
+
+header {
+    width: 95%;
+    position: fixed;
+    z-index: 20;
+}
+.section1_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    border: 2px black solid;
+    border-radius: 15px;
+    width: 80%;
+    margin-left: 10%;
+    height: 400px;
+    background-color: red;
+}
+.section1_section_title {
+    border: 2px black solid;
+    border-radius: 15px;
+    margin: 8px;
+    height: 50px;
+    background-color: white;
+    padding: 3px;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+}
+.section1_section_paragraph {
+    border: 2px black solid;
+    border-radius: 15px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    background-color: white;
+    padding: 3px;
+    height: 300px;
+}
+
+.section1_sections_img img {
+    border-radius: 15px;
+    border: 5px black solid;   
+}
+
+.section1_sections_img {
+    width: auto;
+    height: 290px;
+    margin-left: 8%;
+    margin-bottom: 150px;
+    overflow: hidden;
+    padding: 2px;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    border: 5px black solid;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+/*animation trying*/
+
+:root {
+    --animtime: 20s
+}
+
+.img1 {
+    position: absolute;
+    left: max(calc(500px * 6), 100%);
+    animation-name: imagewheel;
+    animation-duration: var(--animtime);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    height: 280px;
+
+    animation-delay: calc(var(--animtime) / 6 * (6 - 1) * -1);
+}
+
+.img2 {
+    position: absolute;
+    left: max(calc(500px * 6), 100%);
+    animation-name: imagewheel;
+    animation-duration: var(--animtime);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    height: 280px;
+
+    animation-delay: calc(var(--animtime) / 6 * (6 - 2) * -1);
+}
+.img3 {
+    position: absolute;
+    left: max(calc(500px * 6), 100%);
+    animation-name: imagewheel;
+    animation-duration: var(--animtime);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    height: 280px;
+
+    animation-delay: calc(var(--animtime) / 6 * (6 - 3) * -1);
+}
+.img4 {
+    position: absolute;
+    left: max(calc(500px * 6), 100%);
+    animation-name: imagewheel;
+    animation-duration: var(--animtime);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    height: 280px;
+
+    animation-delay: calc(var(--animtime) / 6 * (6 - 4) * -1);
+}
+.img5 {
+    position: absolute;
+    left: max(calc(500px * 6), 100%);
+    animation-name: imagewheel;
+    animation-duration: var(--animtime);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    height: 280px;
+
+    animation-delay: calc(var(--animtime) / 6 * (6 - 5) * -1);
+}
+.img6 {
+    position: absolute;
+    left: max(calc(500px * 6), 100%);
+    animation-name: imagewheel;
+    animation-duration: var(--animtime);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    height: 280px;
+
+    animation-delay: calc(var(--animtime) / 6 * (6 - 6) * -1);
+}
+
+@keyframes imagewheel {
+    to {left: -500px}
+}
+
+/*animation trying*/
+
+.section2_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    border: 2px black solid;
+    border-radius: 15px;
+    width: 80%;
+    margin-left: 10%;
+    height: 400px;
+    background-color: red;
+}
+.section2_section_title {
+    border: 2px black solid;
+    border-radius: 15px;
+    margin: 8px;
+    height: 50px;
+    background-color: white;
+    padding: 3px;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+}
+.section2_section_paragraph {
+    border: 2px black solid;
+    border-radius: 15px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    background-color: white;
+    padding: 3px;
+    height: 300px;
+}
+.section2_sections_img {
+    width: 500px;
+    height: 300px;
+    margin-left: 8%;
+    margin-bottom: 150px;
+    padding: 2px;
+}
+
+.section2_sections_img img {
+    border-radius: 15px;
+    border: 2px black solid;   
+}
+
+
+
+/*CSS FOR MAKING THE INFO PANELS BIGGER*/
+
+/*NOTE: Only after I finished writing all this I realized that I could have just put them both together like:
+
+    #afghanistan:hover {
+        transition: transform 0.5s;
+        transform: scale(2.2);
+    {*/
+
+#afghanistan {
+    transition: transform 0.5s;
+}
+#afghanistan:hover {
+    transform: scale(2.2);
+}
+#albania {
+    transition: transform 0.5s;
+}
+#albania:hover {
+    transform: scale(2.2);
+}
+#algeria {
+    transition: transform 0.5s;
+}
+#algeria:hover {
+    transform: scale(2.2);
+}
+#andorra {
+    transition: transform 0.5s;
+}
+#andorra:hover {
+    transform: scale(2.2);
+}
+#angola {
+    transition: transform 0.5s;
+}
+#angola:hover {
+    transform: scale(2.2);
+}
+#antigua_and_barbuda {
+    transition: transform 0.5s;
+}
+#antigua_and_barbuda:hover {
+    transform: scale(2.2);
+}
+#argentina {
+    transition: transform 0.5s;
+}
+#argentina:hover {
+    transform: scale(2.2);
+}
+#australia {
+    transition: transform 0.5s;
+}
+#australia:hover {
+    transform: scale(2.2);
+}
+#armenia {
+    transition: transform 0.5s;
+}
+#armenia:hover {
+    transform: scale(2.2);
+}
+#austria {
+    transition: transform 0.5s;
+}
+#austria:hover {
+    transform: scale(2.2);
+}
+#azerbaijan {
+    transition: transform 0.5s;
+}
+#azerbaijan:hover {
+    transform: scale(2.2);
+}
+#bahamas {
+    transition: transform 0.5s;
+}
+#bahamas:hover {
+    transform: scale(2.2);
+}
+#bahrain {
+    transition: transform 0.5s;
+}
+#bahrain:hover {
+    transform: scale(2.2);
+}
+#bangladesh {
+    transition: transform 0.5s;
+}
+#bangladesh:hover {
+    transform: scale(2.2);
+}
+#barbados {
+    transition: transform 0.5s;
+}
+#barbados:hover {
+    transform: scale(2.2);
+}
+#belarus {
+    transition: transform 0.5s;
+}
+#belarus:hover {
+    transform: scale(2.2);
+}
+#belgium {
+    transition: transform 0.5s;
+}
+#belgium:hover {
+    transform: scale(2.2);
+}
+#belize {
+    transition: transform 0.5s;
+}
+#belize:hover {
+    transform: scale(2.2);
+}
+#benin {
+    transition: transform 0.5s;
+}
+#benin:hover {
+    transform: scale(2.2);
+}
+#bhutan {
+    transition: transform 0.5s;
+}
+#bhutan:hover {
+    transform: scale(2.2);
+}
+#bolivia {
+    transition: transform 0.5s;
+}
+#bolivia:hover {
+    transform: scale(2.2);
+}
+#bosnia_and_herzegovina {
+    transition: transform 0.5s;
+}
+#bosnia_and_herzegovina:hover {
+    transform: scale(2.2);
+}
+#botswana {
+    transition: transform 0.5s;
+}
+#botswana:hover {
+    transform: scale(2.2);
+}
+#brazil {
+    transition: transform 0.5s;
+}
+#brazil:hover {
+    transform: scale(2.2);
+}
+#brunei {
+    transition: transform 0.5s;
+}
+#brunei:hover {
+    transform: scale(2.2);
+}
+#bulgaria {
+    transition: transform 0.5s;
+}
+#bulgaria:hover {
+    transform: scale(2.2);
+}
+#burkina_faso {
+    transition: transform 0.5s;
+}
+#burkina_faso:hover {
+    transform: scale(2.2);
+}
+#burundi {
+    transition: transform 0.5s;
+}
+#burundi:hover {
+    transform: scale(2.2);
+}
+#cabo_verde {
+    transition: transform 0.5s;
+}
+#cabo_verde:hover {
+    transform: scale(2.2);
+}
+#cambodia {
+    transition: transform 0.5s;
+}
+#cambodia:hover {
+    transform: scale(2.2);
+}
+#cameroon {
+    transition: transform 0.5s;
+}
+#cameroon:hover {
+    transform: scale(2.2);
+}
+#canada {
+    transition: transform 0.5s;
+}
+#canada:hover {
+    transform: scale(2.2);
+}
+#central_african_republic {
+    transition: transform 0.5s;
+}
+#central_african_republic:hover {
+    transform: scale(2.2);
+}
+#chad {
+    transition: transform 0.5s;
+}
+#chad:hover {
+    transform: scale(2.2);
+}
+#chile {
+    transition: transform 0.5s;
+}
+#chile:hover {
+    transform: scale(2.2);
+}
+#china {
+    transition: transform 0.5s;
+}
+#china:hover {
+    transform: scale(2.2);
+}
+#colombia {
+    transition: transform 0.5s;
+}
+#colombia:hover {
+    transform: scale(2.2);
+}
+#comoros {
+    transition: transform 0.5s;
+}
+#comoros:hover {
+    transform: scale(2.2);
+}
+#congo {
+    transition: transform 0.5s;
+}
+#congo:hover {
+    transform: scale(2.2);
+}
+#costa_rica {
+    transition: transform 0.5s;
+}
+#costa_rica:hover {
+    transform: scale(2.2);
+}
+#croatia {
+    transition: transform 0.5s;
+}
+#croatia:hover {
+    transform: scale(2.2);
+}
+#cuba {
+    transition: transform 0.5s;
+}
+#cuba:hover {
+    transform: scale(2.2);
+}
+#cyprus {
+    transition: transform 0.5s;
+}
+#cyprus:hover {
+    transform: scale(2.2);
+}
+#czechia {
+    transition: transform 0.5s;
+}
+#czechia:hover {
+    transform: scale(2.2);
+}
+#democratic_republic_of_the_congo {
+    transition: transform 0.5s;
+}
+#democratic_republic_of_the_congo:hover {
+    transform: scale(2.2);
+}
+#denmark {
+    transition: transform 0.5s;
+}
+#denmark:hover {
+    transform: scale(2.2);
+}
+#djibouti {
+    transition: transform 0.5s;
+}
+#djibouti:hover {
+    transform: scale(2.2);
+}
+#dominica {
+    transition: transform 0.5s;
+}
+#dominica:hover {
+    transform: scale(2.2);
+}
+#dominican_republic {
+    transition: transform 0.5s;
+}
+#dominican_republic:hover {
+    transform: scale(2.2);
+}
+#east_timor {
+    transition: transform 0.5s;
+}
+#east_timor:hover {
+    transform: scale(2.2);
+}
+#ecuador {
+    transition: transform 0.5s;
+}
+#ecuador:hover {
+    transform: scale(2.2);
+}
+#egypt {
+    transition: transform 0.5s;
+}
+#egypt:hover {
+    transform: scale(2.2);
+}
+#el_salvador {
+    transition: transform 0.5s;
+}
+#el_salvador:hover {
+    transform: scale(2.2);
+}
+#equitorial_guinea {
+    transition: transform 0.5s;
+}
+#equitorial_guinea:hover {
+    transform: scale(2.2);
+}
+#eritrea {
+    transition: transform 0.5s;
+}
+#eritrea:hover {
+    transform: scale(2.2);
+}
+#estonia {
+    transition: transform 0.5s;
+}
+#estonia:hover {
+    transform: scale(2.2);
+}
+#eswatini {
+    transition: transform 0.5s;
+}
+#eswatini:hover {
+    transform: scale(2.2);
+}
+#ethiopia {
+    transition: transform 0.5s;
+}
+#ethiopia:hover {
+    transform: scale(2.2);
+}
+#fiji {
+    transition: transform 0.5s;
+}
+#fiji:hover {
+    transform: scale(2.2);
+}
+#finland {
+    transition: transform 0.5s;
+}
+#finland:hover {
+    transform: scale(2.2);
+}
+#france {
+    transition: transform 0.5s;
+}
+#france:hover {
+    transform: scale(2.2);
+}
+#gabon {
+    transition: transform 0.5s;
+}
+#gabon:hover {
+    transform: scale(2.2);
+}
+#georgia {
+    transition: transform 0.5s;
+}
+#georgia:hover {
+    transform: scale(2.2);
+}
+#germany {
+    transition: transform 0.5s;
+}
+#germany:hover {
+    transform: scale(2.2);
+}
+#ghana {
+    transition: transform 0.5s;
+}
+#ghana:hover {
+    transform: scale(2.2);
+}
+#greece {
+    transition: transform 0.5s;
+}
+#greece:hover {
+    transform: scale(2.2);
+}
+#grenada {
+    transition: transform 0.5s;
+}
+#grenada:hover {
+    transform: scale(2.2);
+}
+#guatemala {
+    transition: transform 0.5s;
+}
+#guatemala:hover {
+    transform: scale(2.2);
+}
+#guinea_bissau {
+    transition: transform 0.5s;
+}
+#guinea_bissau:hover {
+    transform: scale(2.2);
+}
+#guinea {
+    transition: transform 0.5s;
+}
+#guinea:hover {
+    transform: scale(2.2);
+}
+#guyana {
+    transition: transform 0.5s;
+}
+#guyana:hover {
+    transform: scale(2.2);
+}
+#haiti {
+    transition: transform 0.5s;
+}
+#haiti:hover {
+    transform: scale(2.2);
+}
+#honduras {
+    transition: transform 0.5s;
+}
+#honduras:hover {
+    transform: scale(2.2);
+}
+#hungary {
+    transition: transform 0.5s;
+}
+#hungary:hover {
+    transform: scale(2.2);
+}
+#iceland {
+    transition: transform 0.5s;
+}
+#iceland:hover {
+    transform: scale(2.2);
+}
+#india {
+    transition: transform 0.5s;
+}
+#india:hover {
+    transform: scale(2.2);
+}
+#indonesia {
+    transition: transform 0.5s;
+}
+#indonesia:hover {
+    transform: scale(2.2);
+}
+#iran {
+    transition: transform 0.5s;
+}
+#iran:hover {
+    transform: scale(2.2);
+}
+#iraq {
+    transition: transform 0.5s;
+}
+#iraq:hover {
+    transform: scale(2.2);
+}
+#ireland {
+    transition: transform 0.5s;
+}
+#ireland:hover {
+    transform: scale(2.2);
+}
+#israel {
+    transition: transform 0.5s;
+}
+#israel:hover {
+    transform: scale(2.2);
+}
+#italy {
+    transition: transform 0.5s;
+}
+#italy:hover {
+    transform: scale(2.2);
+}
+#ivory_coast {
+    transition: transform 0.5s;
+}
+#ivory_coast:hover {
+    transform: scale(2.2);
+}
+#jamaica {
+    transition: transform 0.5s;
+}
+#jamaica:hover {
+    transform: scale(2.2);
+}
+#japan {
+    transition: transform 0.5s;
+}
+#japan:hover {
+    transform: scale(2.2);
+}
+#jordan {
+    transition: transform 0.5s;
+}
+#jordan:hover {
+    transform: scale(2.2);
+}
+#kazakhstan {
+    transition: transform 0.5s;
+}
+#kazakhstan:hover {
+    transform: scale(2.2);
+}
+#kenya {
+    transition: transform 0.5s;
+}
+#kenya:hover {
+    transform: scale(2.2);
+}
+#kiribati {
+    transition: transform 0.5s;
+}
+#kiribati:hover {
+    transform: scale(2.2);
+}
+#kuwait {
+    transition: transform 0.5s;
+}
+#kuwait:hover {
+    transform: scale(2.2);
+}
+#kyrgyzstan {
+    transition: transform 0.5s;
+}
+#kyrgyzstan:hover {
+    transform: scale(2.2);
+}
+#laos {
+    transition: transform 0.5s;
+}
+#laos:hover {
+    transform: scale(2.2);
+}
+#latvia {
+    transition: transform 0.5s;
+}
+#latvia:hover {
+    transform: scale(2.2);
+}
+#lebanon {
+    transition: transform 0.5s;
+}
+#lebanon:hover {
+    transform: scale(2.2);
+}
+#lesotho {
+    transition: transform 0.5s;
+}
+#lesotho:hover {
+    transform: scale(2.2);
+}
+#liberia {
+    transition: transform 0.5s;
+}
+#liberia:hover {
+    transform: scale(2.2);
+}
+#libya {
+    transition: transform 0.5s;
+}
+#libya:hover {
+    transform: scale(2.2);
+}
+#liechtenstein {
+    transition: transform 0.5s;
+}
+#liechtenstein:hover {
+    transform: scale(2.2);
+}
+#lithuania {
+    transition: transform 0.5s;
+}
+#lithuania:hover {
+    transform: scale(2.2);
+}
+#luxembourg {
+    transition: transform 0.5s;
+}
+#luxembourg:hover {
+    transform: scale(2.2);
+}
+#madagascar {
+    transition: transform 0.5s;
+}
+#madagascar:hover {
+    transform: scale(2.2);
+}
+#malawi {
+    transition: transform 0.5s;
+}
+#malawi:hover {
+    transform: scale(2.2);
+}
+#malaysia {
+    transition: transform 0.5s;
+}
+#malaysia:hover {
+    transform: scale(2.2);
+}
+#maldives {
+    transition: transform 0.5s;
+}
+#maldives:hover {
+    transform: scale(2.2);
+}
+#mali {
+    transition: transform 0.5s;
+}
+#mali:hover {
+    transform: scale(2.2);
+}
+#malta {
+    transition: transform 0.5s;
+}
+#malta:hover {
+    transform: scale(2.2);
+}
+#marshall_islands {
+    transition: transform 0.5s;
+}
+#marshall_islands:hover {
+    transform: scale(2.2);
+}
+#mauritania {
+    transition: transform 0.5s;
+}
+#mauritania:hover {
+    transform: scale(2.2);
+}
+#mauritius {
+    transition: transform 0.5s;
+}
+#mauritius:hover {
+    transform: scale(2.2);
+}
+#mexico {
+    transition: transform 0.5s;
+}
+#mexico:hover {
+    transform: scale(2.2);
+}
+#micronesia {
+    transition: transform 0.5s;
+}
+#micronesia:hover {
+    transform: scale(2.2);
+}
+#moldova {
+    transition: transform 0.5s;
+}
+#moldova:hover {
+    transform: scale(2.2);
+}
+#monaco {
+    transition: transform 0.5s;
+}
+#monaco:hover {
+    transform: scale(2.2);
+}
+#mongolia {
+    transition: transform 0.5s;
+}
+#mongolia:hover {
+    transform: scale(2.2);
+}
+#montenegro {
+    transition: transform 0.5s;
+}
+#montenegro:hover {
+    transform: scale(2.2);
+}
+#morocco {
+    transition: transform 0.5s;
+}
+#morocco:hover {
+    transform: scale(2.2);
+}
+#mongolia {
+    transition: transform 0.5s;
+}
+#mongolia:hover {
+    transform: scale(2.2);
+}
+#mozambique {
+    transition: transform 0.5s;
+}
+#mozambique:hover {
+    transform: scale(2.2);
+}
+#myanmar {
+    transition: transform 0.5s;
+}
+#myanmar:hover {
+    transform: scale(2.2);
+}
+#namibia {
+    transition: transform 0.5s;
+}
+#namibia:hover {
+    transform: scale(2.2);
+}
+#nauru {
+    transition: transform 0.5s;
+}
+#nauru:hover {
+    transform: scale(2.2);
+}
+#nepal {
+    transition: transform 0.5s;
+}
+#nepal:hover {
+    transform: scale(2.2);
+}
+#netherlands {
+    transition: transform 0.5s;
+}
+#netherlands:hover {
+    transform: scale(2.2);
+}
+#new_zealand {
+    transition: transform 0.5s;
+}
+#new_zealand:hover {
+    transform: scale(2.2);
+}
+#nicaragua {
+    transition: transform 0.5s;
+}
+#nicaragua:hover {
+    transform: scale(2.2);
+}
+#niger {
+    transition: transform 0.5s;
+}
+#niger:hover {
+    transform: scale(2.2);
+}
+#nigeria {
+    transition: transform 0.5s;
+}
+#nigeria:hover {
+    transform: scale(2.2);
+}
+#north_korea {
+    transition: transform 0.5s;
+}
+#north_korea:hover {
+    transform: scale(2.2);
+}
+#north_macedonia {
+    transition: transform 0.5s;
+}
+#north_macedonia:hover {
+    transform: scale(2.2);
+}
+#norway {
+    transition: transform 0.5s;
+}
+#norway:hover {
+    transform: scale(2.2);
+}
+#oman {
+    transition: transform 0.5s;
+}
+#oman:hover {
+    transform: scale(2.2);
+}
+#pakistan {
+    transition: transform 0.5s;
+}
+#pakistan:hover {
+    transform: scale(2.2);
+}
+#palau {
+    transition: transform 0.5s;
+}
+#palau:hover {
+    transform: scale(2.2);
+}
+#palestine {
+    transition: transform 0.5s;
+}
+#palestine:hover {
+    transform: scale(2.2);
+}
+#panama {
+    transition: transform 0.5s;
+}
+#panama:hover {
+    transform: scale(2.2);
+}
+#papua_new_guinea {
+    transition: transform 0.5s;
+}
+#papua_new_guinea:hover {
+    transform: scale(2.2);
+}
+#paraguay {
+    transition: transform 0.5s;
+}
+#paraguay:hover {
+    transform: scale(2.2);
+}
+#peru {
+    transition: transform 0.5s;
+}
+#peru:hover {
+    transform: scale(2.2);
+}
+#philippines {
+    transition: transform 0.5s;
+}
+#philippines:hover {
+    transform: scale(2.2);
+}
+#poland {
+    transition: transform 0.5s;
+}
+#poland:hover {
+    transform: scale(2.2);
+}
+#portugal {
+    transition: transform 0.5s;
+}
+#portugal:hover {
+    transform: scale(2.2);
+}
+#qatar {
+    transition: transform 0.5s;
+}
+#qatar:hover {
+    transform: scale(2.2);
+}
+#romania {
+    transition: transform 0.5s;
+}
+#romania:hover {
+    transform: scale(2.2);
+}
+#russia {
+    transition: transform 0.5s;
+}
+#russia:hover {
+    transform: scale(2.2);
+}
+#rwanda {
+    transition: transform 0.5s;
+}
+#rwanda:hover {
+    transform: scale(2.2);
+}
+#saint_kitts_and_nevis {
+    transition: transform 0.5s;
+}
+#saint_kitts_and_nevis:hover {
+    transform: scale(2.2);
+}
+#saint_lucia {
+    transition: transform 0.5s;
+}
+#saint_lucia:hover {
+    transform: scale(2.2);
+}
+#saint_vincent_and_the_grenadines {
+    transition: transform 0.5s;
+}
+#saint_vincent_and_the_grenadines:hover {
+    transform: scale(2.2);
+}
+#samoa {
+    transition: transform 0.5s;
+}
+#samoa:hover {
+    transform: scale(2.2);
+}
+#san_marino {
+    transition: transform 0.5s;
+}
+#san_marino:hover {
+    transform: scale(2.2);
+}
+#sao_tome_and_principe {
+    transition: transform 0.5s;
+}
+#sao_tome_and_principe:hover {
+    transform: scale(2.2);
+}
+#saudi_arabia {
+    transition: transform 0.5s;
+}
+#saudi_arabia:hover {
+    transform: scale(2.2);
+}
+#senegal {
+    transition: transform 0.5s;
+}
+#senegal:hover {
+    transform: scale(2.2);
+}
+#serbia {
+    transition: transform 0.5s;
+}
+#serbia:hover {
+    transform: scale(2.2);
+}
+#seychelles {
+    transition: transform 0.5s;
+}
+#seychelles:hover {
+    transform: scale(2.2);
+}
+#sierra_leone {
+    transition: transform 0.5s;
+}
+#sierra_leone:hover {
+    transform: scale(2.2);
+}
+#singapore {
+    transition: transform 0.5s;
+}
+#singapore:hover {
+    transform: scale(2.2);
+}
+#slovakia {
+    transition: transform 0.5s;
+}
+#slovakia:hover {
+    transform: scale(2.2);
+}
+#slovenia {
+    transition: transform 0.5s;
+}
+#slovenia:hover {
+    transform: scale(2.2);
+}
+#solomon_islands {
+    transition: transform 0.5s;
+}
+#solomon_islands:hover {
+    transform: scale(2.2);
+}
+#somalia {
+    transition: transform 0.5s;
+}
+#somalia:hover {
+    transform: scale(2.2);
+}
+#south_africa {
+    transition: transform 0.5s;
+}
+#south_africa:hover {
+    transform: scale(2.2);
+}
+#south_korea {
+    transition: transform 0.5s;
+}
+#south_korea:hover {
+    transform: scale(2.2);
+}
+#south_sudan {
+    transition: transform 0.5s;
+}
+#south_sudan:hover {
+    transform: scale(2.2);
+}
+#spain {
+    transition: transform 0.5s;
+}
+#spain:hover {
+    transform: scale(2.2);
+}
+#sri_lanka {
+    transition: transform 0.5s;
+}
+#sri_lanka:hover {
+    transform: scale(2.2);
+}
+#sudan {
+    transition: transform 0.5s;
+}
+#sudan:hover {
+    transform: scale(2.2);
+}
+#suriname {
+    transition: transform 0.5s;
+}
+#suriname:hover {
+    transform: scale(2.2);
+}
+#sweden {
+    transition: transform 0.5s;
+}
+#sweden:hover {
+    transform: scale(2.2);
+}
+#switzerland {
+    transition: transform 0.5s;
+}
+#switzerland:hover {
+    transform: scale(2.2);
+}
+#syria {
+    transition: transform 0.5s;
+}
+#syria:hover {
+    transform: scale(2.2);
+}
+#tajikistan {
+    transition: transform 0.5s;
+}
+#tajikistan:hover {
+    transform: scale(2.2);
+}
+#tanzania {
+    transition: transform 0.5s;
+}
+#tanzania:hover {
+    transform: scale(2.2);
+}
+#thailand {
+    transition: transform 0.5s;
+}
+#thailand:hover {
+    transform: scale(2.2);
+}
+#the_gambia {
+    transition: transform 0.5s;
+}
+#the_gambia:hover {
+    transform: scale(2.2);
+}
+#togo {
+    transition: transform 0.5s;
+}
+#togo:hover {
+    transform: scale(2.2);
+}
+#tonga {
+    transition: transform 0.5s;
+}
+#tonga:hover {
+    transform: scale(2.2);
+}
+#trinidad_and_tobago {
+    transition: transform 0.5s;
+}
+#trinidad_and_tobago:hover {
+    transform: scale(2.2);
+}
+#tunisia {
+    transition: transform 0.5s;
+}
+#tunisia:hover {
+    transform: scale(2.2);
+}
+#turkey {
+    transition: transform 0.5s;
+}
+#turkey:hover {
+    transform: scale(2.2);
+}
+#turkmenistan {
+    transition: transform 0.5s;
+}
+#turkmenistan:hover {
+    transform: scale(2.2);
+}
+#tuvalu {
+    transition: transform 0.5s;
+}
+#tuvalu:hover {
+    transform: scale(2.2);
+}
+#uganda {
+    transition: transform 0.5s;
+}
+#uganda:hover {
+    transform: scale(2.2);
+}
+#ukraine {
+    transition: transform 0.5s;
+}
+#ukraine:hover {
+    transform: scale(2.2);
+}
+#united_arab_emirates {
+    transition: transform 0.5s;
+}
+#united_arab_emirates:hover {
+    transform: scale(2.2);
+}
+#united_kingdom {
+    transition: transform 0.5s;
+}
+#united_kingdom:hover {
+    transform: scale(2.2);
+}
+#uruguay {
+    transition: transform 0.5s;
+}
+#uruguay:hover {
+    transform: scale(2.2);
+}
+#usa {
+    transition: transform 0.5s;
+}
+#usa:hover {
+    transform: scale(2.2);
+}
+#uzbekistan {
+    transition: transform 0.5s;
+}
+#uzbekistan:hover {
+    transform: scale(2.2);
+}
+#vanuatu {
+    transition: transform 0.5s;
+}
+#vanuatu:hover {
+    transform: scale(2.2);
+}
+#vatican_city {
+    transition: transform 0.5s;
+}
+#vatican_city:hover {
+    transform: scale(2.2);
+}
+#venezuela {
+    transition: transform 0.5s;
+}
+#venezuela:hover {
+    transform: scale(2.2);
+}
+#vietnam {
+    transition: transform 0.5s;
+}
+#vietnam:hover {
+    transform: scale(2.2);
+}
+#yemen {
+    transition: transform 0.5s;
+}
+#yemen:hover {
+    transform: scale(2.2);
+}
+#zambia {
+    transition: transform 0.5s;
+}
+#zambia:hover {
+    transform: scale(2.2);
+}
+#zimbabwe {
+    transition: transform 0.5s;
+}
+#zimbabwe:hover {
+    transform: scale(2.2);
+}

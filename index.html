@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home | Flags of the World</title>
+        <link rel="stylesheet" href="styles_discover.css">
+    </head>
+    <body>
+        <div id="container">
+            <svg class="topsvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#273036" fill-opacity="1" d="M0,224L48,229.3C96,235,192,245,288,213.3C384,181,480,107,576,101.3C672,96,768,160,864,186.7C960,213,1056,203,1152,192C1248,181,1344,171,1392,165.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+            <!--Header-->
+            <header class="homepage_header">
+                <div class="header_container">
+                    <section class="homepage_logo"><img src="Flags_of_the_World-removebg-preview.png" alt="Logo" width="60" height="60">Flags of the World</section>
+                    <section><a href="discover.html"class="homepage_buttons">Discover</a></section>
+                    <section><a href="about.html" class="homepage_buttons">About Us</a></section>
+                    <section><a href="resources.html" class="homepage_buttons">Resources</a></section>
+                    <section><a href="sign_up.html" class="homepage_buttons">Sign Up</a></section>
+                </div>
+            </header> 
+            <!--First Section of text and image-->
+            <br><br><br><br><br><br><br>
+            <section class="title"><h2>Home!</h2></section>
+            <section class="title_text">Discover information that you never knew about some of your favourite flags!</section>
+            <section class="title_text2">Choose Colours and then Hover over the Flags!</section>
+            <br>
+            <div class="section1_container">
+                <section class="section1_section_title">Welcome to the World of Flags!</section>
+                <section></section>
+                <section class="section1_section_paragraph">Flags are art. Even though at first you might not know what anything on a flag means and not realize what it really represents, the deeper you dig the more things that you'll discover that will blow your mind! That's why this website was created, to teach people on many things of the designs of all the flags from the countries recognized by the UN. Below you will find ways to check out different flags by their amazing and vibrant colours!</section>
+                <div class="section1_sections_img">
+                    <!--Moving Image wheel-->
+                    <section class="img1"><img src="flags images/usa.png" alt="usa" width="auto" height="280"></section>
+                    <section class="img2"><img src="flags images/united_kingdom.png" alt="uk" width="auto" height="280"></section>
+                    <section class="img3"><img src="flags images/canada.png" alt="canada" width="auto" height="280"></section>
+                    <section class="img4"><img src="flags images/australia.png" alt="australia" width="auto" height="280"></section>
+                    <section class="img5"><img src="flags images/jamaica.jpeg" alt="jamaica" width="auto" height="280"></section>
+                    <section class="img6"><img src="flags images/kazakhstan.png" alt="kazakhstan" width="auto" height="280"></section>
+                </div>
+            </div>  
+            <br>
+            <!-- dropdown with checkboxes -->
+            <form>
+                <div class="multipleSelection">
+                    <div class="selectBox" onclick="toggleDropdown()">
+                        <select>
+                            <option>Select Colors</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+                    <div id="colorCheckBoxes">
+                        <label for="all">
+                            <input type="checkbox" id="all" />
+                            All (196)
+                        </label>
+                        <label for="red">
+                            <input type="checkbox" id="red" />
+                            Red (155)
+                        </label>
+                        <label for="orange">
+                            <input type="checkbox" id="orange" />
+                            Orange (9)
+                        </label>
+                        <label for="yellow">
+                            <input type="checkbox" id="yellow" />
+                            Yellow (103)
+                        </label>
+                        <label for="green">
+                            <input type="checkbox" id="green" />
+                            Green (99)
+                        </label>
+                        <label for="blue">
+                            <input type="checkbox" id="blue" />
+                            Blue (102)
+                        </label>
+                        <label for="purple">
+                            <input type="checkbox" id="purple" />
+                            Purple (1)
+                        </label>
+                        <label for="white">
+                            <input type="checkbox" id="white" />
+                            White (145)
+                        </label>
+                        <label for="black">
+                            <input type="checkbox" id="black" />
+                            Black (54)
+                        </label>
+                        <label for="brown">
+                            <input type="checkbox" id="brown" />
+                            Brown (10)
+                        </label>
+                        <label for="gray">
+                            <input type="checkbox" id="gray" />
+                            Gray (6)
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <br>
+            <div id="imagesContainer" class="imageContainer"></div>
+
+            <!--omg this stupid js code AHHH-->
+            <!--Basically what happens is that all of the images have associated id's and colour id's in them which
+            then make it so that if a checkbox is clicked it will show flags with only that colour and then if theres more
+            than one selected it does the same but just more colours. the 3 extremely long section of if statements are 
+            for assigning the image id's for the css code and making the image change when the mouse enters or leaves the images
+            for the info panels-->
+            <script>
+                let dropdownVisible = false;
+            
+                function toggleDropdown() {
+                    const checkboxes = document.getElementById("colorCheckBoxes");
+                    checkboxes.style.display = dropdownVisible ? "none" : "block";
+                    dropdownVisible = !dropdownVisible;
+                }
+
+                const imageColors = {
+                    "flags images/afghanistan.png": ["white", "black", "red", "green", "all"],
+                    "flags images/albania.png": ["red", "black", "all"],
+                    "flags images/algeria.png": ["red", "green", "white", "all"],
+                    "flags images/andorra.png": ["red", "yellow", "blue", "white", "brown", "all"],
+                    "flags images/angola.png": ["red", "black", "yellow", "all"],
+                    "flags images/antigua_and_barbuda.png": ["red", "black", "blue", "yellow", "white", "all"],
+                    "flags images/argentina.png": ["yellow", "white", "blue", "all"],
+                    "flags images/armenia.png": ["red", "yellow", "blue", "all"],
+                    "flags images/australia.png": ["red", "blue", "white", "all"],
+                    "flags images/austria.png": ["red", "white", "all"],
+                    "flags images/azerbaijan.png": ["red", "white", "blue", "green", "all"],
+                    "flags images/bahamas.png": ["yellow", "black", "blue", "all"],
+                    "flags images/bahrain.png": ["red", "white", "all"],
+                    "flags images/bangladesh.png": ["red", "green", "all"],
+                    "flags images/barbados.png": ["yellow", "black", "blue", "all"],
+                    "flags images/belarus.png": ["red", "green", "white", "all"],
+                    "flags images/belgium.png": ["red", "black", "yellow", "all"],
+                    "flags images/belize.png": ["red", "green", "white", "blue", "yellow", "brown", "all"],
+                    "flags images/benin.png": ["red", "green", "yellow", "all"],
+                    "flags images/bhutan.png": ["orange", "white", "yellow", "black", "all"],
+                    "flags images/bolivia.png": ["red", "yellow", "green", "all"],
+                    "flags images/bosnia_and_herzegovina.png": ["blue", "yellow", "white", "all"],
+                    "flags images/botswana.png": ["blue", "white", "black", "all"],
+                    "flags images/brazil.png": ["blue", "green", "white", "yellow", "all"],
+                    "flags images/brunei.png": ["red", "yellow", "white", "black", "all"],
+                    "flags images/bulgaria.png": ["red", "green", "white", "all"],
+                    "flags images/burkina_faso.png": ["red", "green", "yellow", "all"],
+                    "flags images/burundi.png": ["red", "green", "white", "all"],
+                    "flags images/cabo_verde.png": ["red", "yellow", "blue", "white", "all"],
+                    "flags images/cambodia.png": ["red", "blue", "white", "black", "all"],
+                    "flags images/cameroon.png": ["red", "green", "yellow", "all"],
+                    "flags images/canada.png": ["red", "white", "all"],
+                    "flags images/central_african_republic.png": ["red", "green", "blue", "white", "yellow", "all"],
+                    "flags images/chad.png": ["red", "blue", "yellow", "all"],
+                    "flags images/chile.png": ["red", "blue", "white", "all"],
+                    "flags images/china.png": ["red", "yellow", "all"],
+                    "flags images/colombia.png": ["red", "blue", "yellow", "all"],
+                    "flags images/comoros.png": ["red", "green", "blue", "white", "yellow", "all"],
+                    "flags images/democratic_republic_of_the_congo.png": ["red", "blue", "yellow", "all"],
+                    "flags images/congo.png": ["red", "green", "yellow", "all"],
+                    "flags images/costa_rica.png": ["red", "green", "blue", "white", "brown", "yellow", "all"],
+                    "flags images/croatia.png": ["red", "white", "blue", "yellow", "black", "all"],
+                    "flags images/cuba.png": ["red", "white", "blue", "all"],
+                    "flags images/cyprus.png": ["orange", "green", "white", "all"],
+                    "flags images/czechia.png": ["red", "blue", "white", "all"],
+                    "flags images/denmark.png": ["red", "white", "all"],
+                    "flags images/djibouti.png": ["red", "green", "white", "blue", "all"],
+                    "flags images/dominica.png": ["red", "green", "yellow", "black", "brown", "purple", "white", "all"],
+                    "flags images/dominican_republic.png": ["red", "blue", "white", "green", "yellow", "all"],
+                    "flags images/east_timor.png": ["red", "yellow", "black", "white", "all"],
+                    "flags images/ecuador.png": ["red", "white", "blue", "yellow", "green", "gray", "brown", "all"],
+                    "flags images/egypt.png": ["red", "white", "black", "yellow", "all"],
+                    "flags images/el_salvador.png": ["red", "white", "blue", "yellow", "green", "all"],
+                    "flags images/equitorial_guinea.png": ["red", "white", "blue", "green", "yellow", "brown", "gray", "black", "all"],
+                    "flags images/eritrea.png": ["red", "yellow", "blue", "green", "all"],
+                    "flags images/estonia.png": ["black", "white", "blue", "all"],
+                    "flags images/eswatini.png": ["red", "white", "blue", "yellow", "black", "all"],
+                    "flags images/ethiopia.png": ["red", "yellow", "green", "blue", "all"],
+                    "flags images/fiji.png": ["red", "white", "blue", "yellow", "brown", "green", "all"],
+                    "flags images/finland.png": ["blue", "white", "all"],
+                    "flags images/france.png": ["red", "white", "blue", "all"],
+                    "flags images/gabon.png": ["blue", "yellow", "green", "all"],
+                    "flags images/the_gambia.png": ["red", "white", "blue", "green", "all"],
+                    "flags images/georgia.png": ["red", "white", "all"],
+                    "flags images/germany.png": ["red", "yellow", "black", "all"],
+                    "flags images/ghana.png": ["red", "yellow", "green", "black", "all"],
+                    "flags images/greece.png": ["blue", "white", "all"],
+                    "flags images/grenada.png": ["red", "yellow", "green", "all"],
+                    "flags images/guatemala.png": ["blue", "white", "green", "brown", "gray", "yellow", "all"],
+                    "flags images/guinea.png": ["red", "yellow", "green", "all"],
+                    "flags images/guinea_bissau.png": ["red", "yellow", "green", "black", "all"],
+                    "flags images/guyana.png": ["red", "white", "yellow", "green", "black", "all"],
+                    "flags images/haiti.png": ["red", "white", "blue", "green", "yellow", "white", "black", "all"],
+                    "flags images/honduras.png": ["blue", "white", "all"],
+                    "flags images/hungary.png": ["red", "white", "green", "all"],
+                    "flags images/iceland.png": ["red", "white", "blue", "all"],
+                    "flags images/india.png": ["orange", "white", "green", "blue", "all"],
+                    "flags images/indonesia.png": ["red", "white", "all"],
+                    "flags images/iran.png": ["red", "white", "green", "all"],
+                    "flags images/iraq.png": ["red", "white", "green", "black", "all"],
+                    "flags images/ireland.png": ["orange", "white", "green", "all"],
+                    "flags images/israel.png": ["blue", "white", "all"],
+                    "flags images/italy.png": ["red", "white", "green", "all"],
+                    "flags images/ivory_coast.png": ["green", "white", "orange", "all"],
+                    "flags images/jamaica.jpeg": ["green", "yellow", "black", "all"],
+                    "flags images/japan.png": ["red", "white", "all"],
+                    "flags images/jordan.png": ["green", "white", "red", "black", "all"],
+                    "flags images/kazakhstan.png": ["blue", "yellow", "all"],
+                    "flags images/kenya.png": ["red", "white", "black", "green", "all"],
+                    "flags images/kiribati.png": ["blue", "white", "red", "yellow", "all"],
+                    "flags images/north_korea.png": ["blue", "white", "red", "all"],
+                    "flags images/south_korea.png": ["blue", "white", "red", "black", "all"],
+                    "flags images/kuwait.png": ["black", "white", "green", "red", "all"],
+                    "flags images/kyrgyzstan.png": ["red", "yellow", "all"],
+                    "flags images/laos.png": ["blue", "white", "red", "all"],
+                    "flags images/latvia.png": ["red", "white", "all"],
+                    "flags images/lebanon.png": ["red", "white", "green", "all"],
+                    "flags images/lesotho.png": ["blue", "white", "green", "black", "all"],
+                    "flags images/liberia.png": ["red", "white", "blue", "all"],
+                    "flags images/libya.png": ["red", "white", "blakc", "green", "all"],
+                    "flags images/liechtenstein.png": ["red", "yellow", "black", "blue", "all"],
+                    "flags images/lithuania.png": ["red", "yellow", "green", "all"],
+                    "flags images/luxembourg.png": ["red", "white", "blue", "all"],
+                    "flags images/madagascar.png": ["red", "white", "green", "all"],
+                    "flags images/malawi.png": ["red", "green", "black", "all"],
+                    "flags images/malaysia.png": ["red", "white", "blue", "yellow", "all"],
+                    "flags images/maldives.png": ["red", "white", "green", "all"],
+                    "flags images/mali.png": ["red", "yellow", "green", "all"],
+                    "flags images/malta.png": ["red", "white", "gray", "all"],
+                    "flags images/marshall_islands.png": ["blue", "white", "orange", "all"],
+                    "flags images/mauritania.png": ["red", "green", "yellow", "all"],
+                    "flags images/mauritius.png": ["red", "yellow", "blue", "green", "all"],
+                    "flags images/mexico.png": ["red", "white", "green", "blue", "brown", "yellow", "all"],
+                    "flags images/micronesia.png": ["blue", "white", "all"],
+                    "flags images/moldova.png": ["red", "blue", "yellow", "green", "black", "all"],
+                    "flags images/monaco.png": ["red", "white", "all"],
+                    "flags images/mongolia.png": ["red", "yellow", "blue", "all"],
+                    "flags images/montenegro.png": ["red", "yellow", "blue", "green", "all"],
+                    "flags images/morocco.png": ["red", "green", "all"],
+                    "flags images/mozambique.png": ["red", "white", "yellow", "green", "black", "all"],
+                    "flags images/myanmar.png": ["red", "white", "yellow", "green", "all"],
+                    "flags images/namibia.png": ["red", "white", "blue", "green", "yellow", "all"],
+                    "flags images/nauru.png": ["blue", "white", "yellow", "all"],
+                    "flags images/nepal.png": ["red", "white", "blue", "all"],
+                    "flags images/netherlands.png": ["red", "white", "blue", "all"],
+                    "flags images/new_zealand.png": ["red", "white", "blue", "all"],
+                    "flags images/nicaragua.png": ["red", "white", "blue", "yellow", "green", "all"],
+                    "flags images/niger.png": ["orange", "white", "green", "all"],
+                    "flags images/nigeria.png": ["green", "white", "all"],
+                    "flags images/north_macedonia.png": ["red", "yellow", "all"],
+                    "flags images/norway.png": ["red", "white", "blue", "all"],
+                    "flags images/oman.png": ["red", "white", "green", "all"],
+                    "flags images/pakistan.png": ["green", "white", "all"],
+                    "flags images/palau.png": ["blue", "yellow", "all"],
+                    "flags images/palestine.png": ["red", "white", "green", "black", "all"],
+                    "flags images/panama.png": ["red", "white", "blue", "all"],
+                    "flags images/papua_new_guinea.png": ["red", "white", "yellow", "black", "all"],
+                    "flags images/paraguay.png": ["red", "white", "blue", "green", "black", "yellow", "all"],
+                    "flags images/peru.png": ["red", "white", "green", "yellow", "blue", "brown", "all"],
+                    "flags images/philippines.png": ["red", "white", "yellow", "blue", "all"],
+                    "flags images/poland.png": ["red", "white", "all"],
+                    "flags images/portugal.png": ["red", "white", "green", "yellow", "blue", "all"],
+                    "flags images/qatar.png": ["red", "white", "all"],
+                    "flags images/romania.png": ["red", "blue", "yellow", "all"],
+                    "flags images/russia.png": ["red", "white", "blue", "all"],
+                    "flags images/rwanda.png": ["green", "blue", "yellow", "all"],
+                    "flags images/saint_kitts_and_nevis.png": ["red", "white", "black", "green", "yellow", "all"],
+                    "flags images/saint_lucia.png": ["blue", "yellow", "black", "white", "all"],
+                    "flags images/saint_vincent_and_the_grenadines.png": ["blue", "yellow", "green", "all"],
+                    "flags images/samoa.png": ["red", "white", "blue", "all"],
+                    "flags images/san_marino.png": ["blue", "white", "yellow", "green", "gray", "black", "all"],
+                    "flags images/sao_tome_and_principe.png": ["red", "black", "yellow", "green", "all"],
+                    "flags images/saudi_arabia.png": ["green", "white", "all"],
+                    "flags images/senegal.png": ["red", "green", "yellow", "all"],
+                    "flags images/serbia.png": ["red", "white", "blue", "yellow", "all"],
+                    "flags images/seychelles.png": ["red", "white", "yellow", "green", "blue", "all"],
+                    "flags images/sierra_leone.png": ["blue", "white", "green", "all"],
+                    "flags images/singapore.png": ["red", "white", "all"],
+                    "flags images/slovakia.png": ["red", "white", "blue", "all"],
+                    "flags images/slovenia.png": ["red", "white", "blue", "yellow", "all"],
+                    "flags images/solomon_islands.png": ["blue", "white", "yellow", "green", "all"],
+                    "flags images/somalia.png": ["blue", "white", "all"],
+                    "flags images/south_africa.png": ["red", "white", "yellow", "black", "green", "blue", "all"],
+                    "flags images/south_sudan.png": ["red", "blue", "white", "yellow", "green", "black", "all"],
+                    "flags images/spain.png": ["red", "white", "yellow", "blue", "green", "all"],
+                    "flags images/sri_lanka.png": ["red", "yellow", "orange", "green", "all"],
+                    "flags images/sudan.png": ["red", "white", "green", "black", "all"],
+                    "flags images/suriname.png": ["red", "white", "yellow", "green", "all"],
+                    "flags images/sweden.png": ["blue", "yellow", "all"],
+                    "flags images/switzerland.png": ["red", "white", "all"],
+                    "flags images/syria.png": ["red", "white", "green", 'black', "all"],
+                    "flags images/tajikistan.png": ["red", "white", "green", "yellow", "all"],
+                    "flags images/tanzania.png": ["green", "blue", "black", "yellow", "all"],
+                    "flags images/thailand.png": ["red", "white", "blue", "all"],
+                    "flags images/togo.png": ["red", "white", "green", "yellow", "all"],
+                    "flags images/tonga.png": ["red", "white", "all"],
+                    "flags images/trinidad_and_tobago.png": ["red", "white", "black", "all"],
+                    "flags images/tunisia.png": ["red", "white", "all"],
+                    "flags images/turkey.png": ["red", "white", "all"],
+                    "flags images/turkmenistan.png": ["red", "white", "green", "yellow", "all"],
+                    "flags images/tuvalu.png": ["red", "white", "blue", "yellow", "all"],
+                    "flags images/uganda.png": ["red", "white", "yellow", "black", "all"],
+                    "flags images/ukraine.png": ["blue", "yellow", "all"],
+                    "flags images/united_arab_emirates.png": ["white", "green", "black", "red", "all"],
+                    "flags images/united_kingdom.png": ["blue", "white", "red", "all"],
+                    "flags images/usa.png": ["red", "blue", "white", "all"],
+                    "flags images/uruguay.png": ["blue", "white", "all"],
+                    "flags images/uzbekistan.png": ["red", "blue", "white", "green", "all"],
+                    "flags images/vanuatu.png": ["red", "green", "yellow", "black", "all"],
+                    "flags images/vatican_city.png": ["red", "yellow", "white", "gray", "black", "all"],
+                    "flags images/venezuela.png": ["red", "blue", "white", "yellow", "all"],
+                    "flags images/vietnam.png": ["red", "yellow", "all"],
+                    "flags images/yemen.png": ["red", "black", "white", "all"],
+                    "flags images/zambia.png": ["red", "green", "black", "orange", "all"],
+                    "flags images/zimbabwe.png": ["red", "black", "white", "green", "yellow", "all"],
+                };
+                    document.querySelectorAll('#colorCheckBoxes input[type="checkbox"]').forEach(checkbox => {
+                        checkbox.addEventListener('change', filterImages);
+                    });
+
+                    function filterImages() {
+                        const selectedColors = Array.from(
+                            document.querySelectorAll('#colorCheckBoxes input[type="checkbox"]:checked')
+                        ).map(checkbox => checkbox.id);
+
+                        const container = document.getElementById('imagesContainer');
+                        container.innerHTML = '';
+
+                        if (selectedColors.length === 0) {
+                            return;
+                        }
+
+                        Object.keys(imageColors).forEach(image => {
+                            const colors = imageColors[image];
+
+                            if (selectedColors.every(color => colors.includes(color))) {
+                                const img = document.createElement('img');
+                                img.src = image; 
+                                img.alt = `Image for colors: ${colors.join(', ')}`;
+                                img.style.margin = "10px";
+                                img.style.width = "100px";
+                                img.id = image;
+
+                                // assigning the ids
+                                if (img.id === "flags images/afghanistan.png") {
+                                    img.id = "afghanistan";
+                                }
+                                if (img.id === "flags images/albania.png") {
+                                    img.id = "albania";
+                                }
+                                if (img.id === "flags images/algeria.png") {
+                                    img.id = "algeria";
+                                }
+                                if (img.id === "flags images/andorra.png") {
+                                    img.id = "andorra";
+                                }
+                                if (img.id === "flags images/angola.png") {
+                                    img.id = "angola";
+                                }
+                                if (img.id === "flags images/antigua_and_barbuda.png") {
+                                    img.id = "antigua_and_barbuda";
+                                }
+                                if (img.id === "flags images/argentina.png") {
+                                    img.id = "argentina";
+                                }
+                                if (img.id === "flags images/armenia.png") {
+                                    img.id = "armenia";
+                                }
+                                if (img.id === "flags images/australia.png") {
+                                    img.id = "australia";
+                                }
+                                if (img.id === "flags images/austria.png") {
+                                    img.id = "austria";
+                                }
+                                if (img.id === "flags images/azerbaijan.png") {
+                                    img.id = "azerbaijan";
+                                }
+                                if (img.id === "flags images/bahamas.png") {
+                                    img.id = "bahamas";
+                                }
+                                if (img.id === "flags images/bahrain.png") {
+                                    img.id = "bahrain";
+                                }
+                                if (img.id === "flags images/bangladesh.png") {
+                                    img.id = "bangladesh";
+                                }
+                                if (img.id === "flags images/barbados.png") {
+                                    img.id = "barbados";
+                                }
+                                if (img.id === "flags images/belarus.png") {
+                                    img.id = "belarus";
+                                }
+                                if (img.id === "flags images/belgium.png") {
+                                    img.id = "belgium";
+                                }
+                                if (img.id === "flags images/belize.png") {
+                                    img.id = "belize";
+                                }
+                                if (img.id === "flags images/benin.png") {
+                                    img.id = "benin";
+                                }
+                                if (img.id === "flags images/bhutan.png") {
+                                    img.id = "bhutan";
+                                }
+                                if (img.id === "flags images/bolivia.png") {
+                                    img.id = "bolivia";
+                                }
+                                if (img.id === "flags images/bosnia_and_herzegovina.png") {
+                                    img.id = "bosnia_and_herzegovina";
+                                }
+                                if (img.id === "flags images/botswana.png") {
+                                    img.id = "botswana";
+                                }
+                                if (img.id === "flags images/brazil.png") {
+                                    img.id = "brazil";
+                                }
+                                if (img.id === "flags images/brunei.png") {
+                                    img.id = "brunei";
+                                }
+                                if (img.id === "flags images/bulgaria.png") {
+                                    img.id = "bulgaria";
+                                }
+                                if (img.id === "flags images/burkina_faso.png") {
+                                    img.id = "burkina_faso";
+                                }
+                                if (img.id === "flags images/burundi.png") {
+                                    img.id = "burundi";
+                                }
+                                if (img.id === "flags images/cabo_verde.png") {
+                                    img.id = "cabo_verde";
+                                }
+                                if (img.id === "flags images/cambodia.png") {
+                                    img.id = "cambodia";
+                                }
+                                if (img.id === "flags images/cameroon.png") {
+                                    img.id = "cameroon";
+                                }
+                                if (img.id === "flags images/canada.png") {
+                                    img.id = "canada";
+                                }
+                                if (img.id === "flags images/central_african_republic.png") {
+                                    img.id = "central_african_republic";
+                                }
+                                if (img.id === "flags images/chad.png") {
+                                    img.id = "chad";
+                                }
+                                if (img.id === "flags images/chile.png") {
+                                    img.id = "chile";
+                                }
+                                if (img.id === "flags images/china.png") {
+                                    img.id = "china";
+                                }
+                                if (img.id === "flags images/colombia.png") {
+                                    img.id = "colombia";
+                                }
+                                if (img.id === "flags images/comoros.png") {
+                                    img.id = "comoros";
+                                }
+                                if (img.id === "flags images/congo.png") {
+                                    img.id = "congo";
+                                }
+                                if (img.id === "flags images/costa_rica.png") {
+                                    img.id = "costa_rica";
+                                }
+                                if (img.id === "flags images/croatia.png") {
+                                    img.id = "croatia";
+                                }
+                                if (img.id === "flags images/cuba.png") {
+                                    img.id = "cuba";
+                                }
+                                if (img.id === "flags images/cyprus.png") {
+                                    img.id = "cyprus";
+                                }
+                                if (img.id === "flags images/czechia.png") {
+                                    img.id = "czechia";
+                                }
+                                if (img.id === "flags images/democratic_republic_of_the_congo.png") {
+                                    img.id = "democratic_republic_of_the_congo";
+                                }
+                                if (img.id === "flags images/denmark.png") {
+                                    img.id = "denmark";
+                                }
+                                if (img.id === "flags images/djibouti.png") {
+                                    img.id = "djibouti";
+                                }
+                                if (img.id === "flags images/dominica.png") {
+                                    img.id = "dominica";
+                                }
+                                if (img.id === "flags images/dominican_republic.png") {
+                                    img.id = "dominican_republic";
+                                }
+                                if (img.id === "flags images/east_timor.png") {
+                                    img.id = "east_timor";
+                                }
+                                if (img.id === "flags images/ecuador.png") {
+                                    img.id = "ecuador";
+                                }
+                                if (img.id === "flags images/egypt.png") {
+                                    img.id = "egypt";
+                                }
+                                if (img.id === "flags images/el_salvador.png") {
+                                    img.id = "el_salvador";
+                                }
+                                if (img.id === "flags images/equitorial_guinea.png") {
+                                    img.id = "equitorial_guinea";
+                                }
+                                if (img.id === "flags images/eritrea.png") {
+                                    img.id = "eritrea";
+                                }
+                                if (img.id === "flags images/estonia.png") {
+                                    img.id = "estonia";
+                                }
+                                if (img.id === "flags images/eswatini.png") {
+                                    img.id = "eswatini";
+                                }
+                                if (img.id === "flags images/ethiopia.png") {
+                                    img.id = "ethiopia";
+                                }
+                                if (img.id === "flags images/fiji.png") {
+                                    img.id = "fiji";
+                                }
+                                if (img.id === "flags images/finland.png") {
+                                    img.id = "finland";
+                                }
+                                if (img.id === "flags images/france.png") {
+                                    img.id = "france";
+                                }
+                                if (img.id === "flags images/gabon.png") {
+                                    img.id = "gabon";
+                                }
+                                if (img.id === "flags images/georgia.png") {
+                                    img.id = "georgia";
+                                }
+                                if (img.id === "flags images/germany.png") {
+                                    img.id = "germany";
+                                }
+                                if (img.id === "flags images/ghana.png") {
+                                    img.id = "ghana";
+                                }
+                                if (img.id === "flags images/greece.png") {
+                                    img.id = "greece";
+                                }
+                                if (img.id === "flags images/grenada.png") {
+                                    img.id = "grenada";
+                                }
+                                if (img.id === "flags images/guatemala.png") {
+                                    img.id = "guatemala";
+                                }
+                                if (img.id === "flags images/guinea_bissau.png") {
+                                    img.id = "guinea_bissau";
+                                }
+                                if (img.id === "flags images/guinea.png") {
+                                    img.id = "guinea";
+                                }
+                                if (img.id === "flags images/guyana.png") {
+                                    img.id = "guyana";
+                                }
+                                if (img.id === "flags images/haiti.png") {
+                                    img.id = "haiti";
+                                }
+                                if (img.id === "flags images/honduras.png") {
+                                    img.id = "honduras";
+                                }
+                                if (img.id === "flags images/hungary.png") {
+                                    img.id = "hungary";
+                                }
+                                if (img.id === "flags images/iceland.png") {
+                                    img.id = "iceland";
+                                }
+                                if (img.id === "flags images/india.png") {
+                                    img.id = "india";
+                                }
+                                if (img.id === "flags images/indonesia.png") {
+                                    img.id = "indonesia";
+                                }
+                                if (img.id === "flags images/iran.png") {
+                                    img.id = "iran";
+                                }
+                                if (img.id === "flags images/iraq.png") {
+                                    img.id = "iraq";
+                                }
+                                if (img.id === "flags images/ireland.png") {
+                                    img.id = "ireland";
+                                }
+                                if (img.id === "flags images/israel.png") {
+                                    img.id = "israel";
+                                }
+                                if (img.id === "flags images/italy.png") {
+                                    img.id = "italy";
+                                }
+                                if (img.id === "flags images/ivory_coast.png") {
+                                    img.id = "ivory_coast";
+                                }
+                                if (img.id === "flags images/jamaica.jpeg") {
+                                    img.id = "jamaica";
+                                }
+                                if (img.id === "flags images/japan.png") {
+                                    img.id = "japan";
+                                }
+                                if (img.id === "flags images/jordan.png") {
+                                    img.id = "jordan";
+                                }
+                                if (img.id === "flags images/kazakhstan.png") {
+                                    img.id = "kazakhstan";
+                                }
+                                if (img.id === "flags images/kenya.png") {
+                                    img.id = "kenya";
+                                }
+                                if (img.id === "flags images/kiribati.png") {
+                                    img.id = "kiribati";
+                                }
+                                if (img.id === "flags images/kuwait.png") {
+                                    img.id = "kuwait";
+                                }
+                                if (img.id === "flags images/kyrgyzstan.png") {
+                                    img.id = "kyrgyzstan";
+                                }
+                                if (img.id === "flags images/laos.png") {
+                                    img.id = "laos";
+                                }
+                                if (img.id === "flags images/latvia.png") {
+                                    img.id = "latvia";
+                                }
+                                if (img.id === "flags images/lebanon.png") {
+                                    img.id = "lebanon";
+                                }
+                                if (img.id === "flags images/lesotho.png") {
+                                    img.id = "lesotho";
+                                }
+                                if (img.id === "flags images/liberia.png") {
+                                    img.id = "liberia";
+                                }
+                                if (img.id === "flags images/libya.png") {
+                                    img.id = "libya";
+                                }
+                                if (img.id === "flags images/liechtenstein.png") {
+                                    img.id = "liechtenstein";
+                                }
+                                if (img.id === "flags images/lithuania.png") {
+                                    img.id = "lithuania";
+                                }
+                                if (img.id === "flags images/luxembourg.png") {
+                                    img.id = "luxembourg";
+                                }
+                                if (img.id === "flags images/madagascar.png") {
+                                    img.id = "madagascar";
+                                }
+                                if (img.id === "flags images/malawi.png") {
+                                    img.id = "malawi";
+                                }
+                                if (img.id === "flags images/malaysia.png") {
+                                    img.id = "malaysia";
+                                }
+                                if (img.id === "flags images/maldives.png") {
+                                    img.id = "maldives";
+                                }
+                                if (img.id === "flags images/mali.png") {
+                                    img.id = "mali";
+                                }
+                                if (img.id === "flags images/malta.png") {
+                                    img.id = "malta";
+                                }
+                                if (img.id === "flags images/marshall_islands.png") {
+                                    img.id = "marshall_islands";
+                                }
+                                if (img.id === "flags images/mauritania.png") {
+                                    img.id = "mauritania";
+                                }
+                                if (img.id === "flags images/mauritius.png") {
+                                    img.id = "mauritius";
+                                }
+                                if (img.id === "flags images/mexico.png") {
+                                    img.id = "mexico";
+                                }
+                                if (img.id === "flags images/micronesia.png") {
+                                    img.id = "micronesia";
+                                }
+                                if (img.id === "flags images/moldova.png") {
+                                    img.id = "moldova";
+                                }
+                                if (img.id === "flags images/monaco.png") {
+                                    img.id = "monaco";
+                                }
+                                if (img.id === "flags images/mongolia.png") {
+                                    img.id = "mongolia";
+                                }
+                                if (img.id === "flags images/montenegro.png") {
+                                    img.id = "montenegro";
+                                }
+                                if (img.id === "flags images/morocco.png") {
+                                    img.id = "morocco";
+                                }
+                                if (img.id === "flags images/mozambique.png") {
+                                    img.id = "mozambique";
+                                }
+                                if (img.id === "flags images/myanmar.png") {
+                                    img.id = "myanmar";
+                                }
+                                if (img.id === "flags images/namibia.png") {
+                                    img.id = "namibia";
+                                }
+                                if (img.id === "flags images/nauru.png") {
+                                    img.id = "nauru";
+                                }
+                                if (img.id === "flags images/nepal.png") {
+                                    img.id = "nepal";
+                                }
+                                if (img.id === "flags images/netherlands.png") {
+                                    img.id = "netherlands";
+                                }
+                                if (img.id === "flags images/new_zealand.png") {
+                                    img.id = "new_zealand";
+                                }
+                                if (img.id === "flags images/nicaragua.png") {
+                                    img.id = "nicaragua";
+                                }
+                                if (img.id === "flags images/niger.png") {
+                                    img.id = "niger";
+                                }
+                                if (img.id === "flags images/nigeria.png") {
+                                    img.id = "nigeria";
+                                }
+                                if (img.id === "flags images/north_korea.png") {
+                                    img.id = "north_korea";
+                                }
+                                if (img.id === "flags images/north_macedonia.png") {
+                                    img.id = "north_macedonia";
+                                }
+                                if (img.id === "flags images/norway.png") {
+                                    img.id = "norway";
+                                }
+                                if (img.id === "flags images/oman.png") {
+                                    img.id = "oman";
+                                }
+                                if (img.id === "flags images/pakistan.png") {
+                                    img.id = "pakistan";
+                                }
+                                if (img.id === "flags images/palau.png") {
+                                    img.id = "palau";
+                                }
+                                if (img.id === "flags images/palestine.png") {
+                                    img.id = "palestine";
+                                }
+                                if (img.id === "flags images/panama.png") {
+                                    img.id = "panama";
+                                }
+                                if (img.id === "flags images/papua_new_guinea.png") {
+                                    img.id = "papua_new_guinea";
+                                }
+                                if (img.id === "flags images/paraguay.png") {
+                                    img.id = "paraguay";
+                                }
+                                if (img.id === "flags images/peru.png") {
+                                    img.id = "peru";
+                                }
+                                if (img.id === "flags images/poland.png") {
+                                    img.id = "poland";
+                                }
+                                if (img.id === "flags images/philippines.png") {
+                                    img.id = "philippines";
+                                }
+                                if (img.id === "flags images/portugal.png") {
+                                    img.id = "portugal";
+                                }
+                                if (img.id === "flags images/qatar.png") {
+                                    img.id = "qatar";
+                                }
+                                if (img.id === "flags images/romania.png") {
+                                    img.id = "romania";
+                                }
+                                if (img.id === "flags images/russia.png") {
+                                    img.id = "russia";
+                                }
+                                if (img.id === "flags images/rwanda.png") {
+                                    img.id = "rwanda";
+                                }
+                                if (img.id === "flags images/saint_kitts_and_nevis.png") {
+                                    img.id = "saint_kitts_and_nevis";
+                                }
+                                if (img.id === "flags images/saint_lucia.png") {
+                                    img.id = "saint_lucia";
+                                }
+                                if (img.id === "flags images/saint_vincent_and_the_grenadines.png") {
+                                    img.id = "saint_vincent_and_the_grenadines";
+                                }
+                                if (img.id === "flags images/samoa.png") {
+                                    img.id = "samoa";
+                                }
+                                if (img.id === "flags images/san_marino.png") {
+                                    img.id = "san_marino";
+                                }
+                                if (img.id === "flags images/sao_tome_and_principe.png") {
+                                    img.id = "sao_tome_and_principe";
+                                }
+                                if (img.id === "flags images/saudi_arabia.png") {
+                                    img.id = "saudi_arabia";
+                                }
+                                if (img.id === "flags images/senegal.png") {
+                                    img.id = "senegal";
+                                }
+                                if (img.id === "flags images/serbia.png") {
+                                    img.id = "serbia";
+                                }
+                                if (img.id === "flags images/seychelles.png") {
+                                    img.id = "seychelles";
+                                }
+                                if (img.id === "flags images/sierra_leone.png") {
+                                    img.id = "sierra_leone";
+                                }
+                                if (img.id === "flags images/singapore.png") {
+                                    img.id = "singapore";
+                                }
+                                if (img.id === "flags images/slovakia.png") {
+                                    img.id = "slovakia";
+                                }
+                                if (img.id === "flags images/slovenia.png") {
+                                    img.id = "slovenia";
+                                }
+                                if (img.id === "flags images/solomon_islands.png") {
+                                    img.id = "solomon_islands";
+                                }
+                                if (img.id === "flags images/somalia.png") {
+                                    img.id = "somalia";
+                                }
+                                if (img.id === "flags images/south_africa.png") {
+                                    img.id = "south_africa";
+                                }
+                                if (img.id === "flags images/south_korea.png") {
+                                    img.id = "south_korea";
+                                }
+                                if (img.id === "flags images/south_sudan.png") {
+                                    img.id = "south_sudan";
+                                }
+                                if (img.id === "flags images/spain.png") {
+                                    img.id = "spain";
+                                }
+                                if (img.id === "flags images/sri_lanka.png") {
+                                    img.id = "sri_lanka";
+                                }
+                                if (img.id === "flags images/sudan.png") {
+                                    img.id = "sudan";
+                                }
+                                if (img.id === "flags images/suriname.png") {
+                                    img.id = "suriname";
+                                }
+                                if (img.id === "flags images/sweden.png") {
+                                    img.id = "sweden";
+                                }
+                                if (img.id === "flags images/switzerland.png") {
+                                    img.id = "switzerland";
+                                }
+                                if (img.id === "flags images/syria.png") {
+                                    img.id = "syria";
+                                }
+                                if (img.id === "flags images/tajikistan.png") {
+                                    img.id = "tajikistan";
+                                }
+                                if (img.id === "flags images/tanzania.png") {
+                                    img.id = "tanzania";
+                                }
+                                if (img.id === "flags images/thailand.png") {
+                                    img.id = "thailand";
+                                }
+                                if (img.id === "flags images/the_gambia.png") {
+                                    img.id = "the_gambia";
+                                }
+                                if (img.id === "flags images/togo.png") {
+                                    img.id = "togo";
+                                }
+                                if (img.id === "flags images/tonga.png") {
+                                    img.id = "tonga";
+                                }
+                                if (img.id === "flags images/trinidad_and_tobago.png") {
+                                    img.id = "trinidad_and_tobago";
+                                }
+                                if (img.id === "flags images/tunisia.png") {
+                                    img.id = "tunisia";
+                                }
+                                if (img.id === "flags images/turkey.png") {
+                                    img.id = "turkey";
+                                }
+                                if (img.id === "flags images/turkmenistan.png") {
+                                    img.id = "turkmenistan";
+                                }
+                                if (img.id === "flags images/tuvalu.png") {
+                                    img.id = "tuvalu";
+                                }
+                                if (img.id === "flags images/uganda.png") {
+                                    img.id = "uganda";
+                                }
+                                if (img.id === "flags images/ukraine.png") {
+                                    img.id = "ukraine";
+                                }
+                                if (img.id === "flags images/united_arab_emirates.png") {
+                                    img.id = "united_arab_emirates";
+                                }
+                                if (img.id === "flags images/united_kingdom.png") {
+                                    img.id = "united_kingdom";
+                                }
+                                if (img.id === "flags images/uruguay.png") {
+                                    img.id = "uruguay";
+                                }
+                                if (img.id === "flags images/usa.png") {
+                                    img.id = "usa";
+                                }
+                                if (img.id === "flags images/uzbekistan.png") {
+                                    img.id = "uzbekistan";
+                                }
+                                if (img.id === "flags images/vanuatu.png") {
+                                    img.id = "vanuatu";
+                                }
+                                if (img.id === "flags images/vatican_city.png") {
+                                    img.id = "vatican_city";
+                                }
+                                if (img.id === "flags images/venezuela.png") {
+                                    img.id = "venezuela";
+                                }
+                                if (img.id === "flags images/vietnam.png") {
+                                    img.id = "vietnam";
+                                }
+                                if (img.id === "flags images/yemen.png") {
+                                    img.id = "yemen";
+                                }
+                                if (img.id === "flags images/zambia.png") {
+                                    img.id = "zambia";
+                                }
+                                if (img.id === "flags images/zimbabwe.png") {
+                                    img.id = "zimbabwe";
+                                }
+
+                                //this is the entering oooh
+                                img.addEventListener("mouseenter", (e) => {
+                                    setTimeout(() => {
+                                        img.style.width = "100px";
+                                        img.style.height = "129px";
+                                        if (img.id === "afghanistan") {
+                                            img.src = "info_panels/afghanistan_info.png";
+                                        } else if (img.id === "albania") {
+                                            img.src = "info_panels/albania_info.png";
+                                        } else if (img.id === "algeria") {
+                                            img.src = "info_panels/algeria_info.png";
+                                        } else if (img.id === "andorra") {
+                                            img.src = "info_panels/andorra_info.png";
+                                        } else if (img.id === "angola") {
+                                            img.src = "info_panels/angola_info.png";
+                                        } else if (img.id === "antigua_and_barbuda") {
+                                            img.src = "info_panels/antigua_and_barbuda_info.png";
+                                        } else if (img.id === "argentina") {
+                                            img.src = "info_panels/argentina_info.png";
+                                        } else if (img.id === "australia") {
+                                            img.src = "info_panels/australia_info.png";
+                                        } else if (img.id === "armenia") {
+                                            img.src = "info_panels/armenia_info.png";
+                                        } else if (img.id === "austria") {
+                                            img.src = "info_panels/austria_info.png";
+                                        } else if (img.id === "azerbaijan") {
+                                            img.src = "info_panels/azerbaijan_info.png";
+                                        } else if (img.id === "bahamas") {
+                                            img.src = "info_panels/bahamas_info.png";
+                                        } else if (img.id === "bahrain") {
+                                            img.src = "info_panels/bahrain_info.png";
+                                        } else if (img.id === "bangladesh") {
+                                            img.src = "info_panels/bangladesh_info.png";
+                                        } else if (img.id === "barbados") {
+                                            img.src = "info_panels/barbados_info.png";
+                                        } else if (img.id === "belarus") {
+                                            img.src = "info_panels/belarus_info.png";
+                                        } else if (img.id === "belgium") {
+                                            img.src = "info_panels/belgium_info.png";
+                                        } else if (img.id === "belize") {
+                                            img.src = "info_panels/belize_info.png";
+                                        } else if (img.id === "benin") {
+                                            img.src = "info_panels/benin_info.png";
+                                        } else if (img.id === "bhutan") {
+                                            img.src = "info_panels/bhutan_info.png";
+                                        } else if (img.id === "bolivia") {
+                                            img.src = "info_panels/bolivia_info.png";
+                                        } else if (img.id === "bosnia_and_herzegovina") {
+                                            img.src = "info_panels/bosnia_and_herzegovina_info.png";
+                                        } else if (img.id === "botswana") {
+                                            img.src = "info_panels/botswana_info.png";
+                                        } else if (img.id === "brazil") {
+                                            img.src = "info_panels/brazil_info.png";
+                                        } else if (img.id === "brunei") {
+                                            img.src = "info_panels/brunei_info.png";
+                                        } else if (img.id === "bulgaria") {
+                                            img.src = "info_panels/bulgaria_info.png";
+                                        } else if (img.id === "burkina_faso") {
+                                            img.src = "info_panels/burkina_faso_info.png";
+                                        } else if (img.id === "burundi") {
+                                            img.src = "info_panels/burundi_info.png";
+                                        } else if (img.id === "cabo_verde") {
+                                            img.src = "info_panels/cabo_verde_info.png";
+                                        } else if (img.id === "cambodia") {
+                                            img.src = "info_panels/cambodia_info.png";
+                                        } else if (img.id === "cameroon") {
+                                            img.src = "info_panels/cameroon_info.png";
+                                        } else if (img.id === "canada") {
+                                            img.src = "info_panels/canada_info.png";
+                                        } else if (img.id === "central_african_republic") {
+                                            img.src = "info_panels/central_african_republic_info.png";
+                                        } else if (img.id === "chad") {
+                                            img.src = "info_panels/chad_info.png";
+                                        } else if (img.id === "chile") {
+                                            img.src = "info_panels/chile_info.png";
+                                        } else if (img.id === "china") {
+                                            img.src = "info_panels/china_info.png";
+                                        } else if (img.id === "colombia") {
+                                            img.src = "info_panels/colombia_info.png";
+                                        } else if (img.id === "comoros") {
+                                            img.src = "info_panels/comoros_info.png";
+                                        } else if (img.id === "democratic_republic_of_the_congo") {
+                                            img.src = "info_panels/democratic_republic_of_the_congo_info.png";
+                                        } else if (img.id === "congo") {
+                                            img.src = "info_panels/congo_info.png";
+                                        } else if (img.id === "costa_rica") {
+                                            img.src = "info_panels/costa_rica_info.png";
+                                        } else if (img.id === "croatia") {
+                                            img.src = "info_panels/croatia_info.png";
+                                        } else if (img.id === "cuba") {
+                                            img.src = "info_panels/cuba_info.png";
+                                        } else if (img.id === "cyprus") {
+                                            img.src = "info_panels/cyprus_info.png";
+                                        } else if (img.id === "czechia") {
+                                            img.src = "info_panels/czechia_info.png";
+                                        } else if (img.id === "denmark") {
+                                            img.src = "info_panels/denmark_info.png";
+                                        } else if (img.id === "djibouti") {
+                                            img.src = "info_panels/djibouti_info.png";
+                                        } else if (img.id === "dominica") {
+                                            img.src = "info_panels/dominica_info.png";
+                                        } else if (img.id === "dominican_republic") {
+                                            img.src = "info_panels/dominican_republic_info.png";
+                                        } else if (img.id === "east_timor") {
+                                            img.src = "info_panels/east_timor_info.png";
+                                        } else if (img.id === "ecuador") {
+                                            img.src = "info_panels/ecuador_info.png";
+                                        } else if (img.id === "egypt") {
+                                            img.src = "info_panels/egypt_info.png";
+                                        } else if (img.id === "el_salvador") {
+                                            img.src = "info_panels/el_salvador_info.png";
+                                        } else if (img.id === "equitorial_guinea") {
+                                            img.src = "info_panels/equitorial_guinea_info.png";
+                                        } else if (img.id === "eritrea") {
+                                            img.src = "info_panels/eritrea_info.png";
+                                        } else if (img.id === "estonia") {
+                                            img.src = "info_panels/estonia_info.png";
+                                        } else if (img.id === "eswatini") {
+                                            img.src = "info_panels/eswatini_info.png";
+                                        } else if (img.id === "ethiopia") {
+                                            img.src = "info_panels/ethiopia_info.png";
+                                        } else if (img.id === "fiji") {
+                                            img.src = "info_panels/fiji_info.png";
+                                        } else if (img.id === "finland") {
+                                            img.src = "info_panels/finland_info.png";
+                                        } else if (img.id === "france") {
+                                            img.src = "info_panels/france_info.png";
+                                        } else if (img.id === "gabon") {
+                                            img.src = "info_panels/gabon_info.png";
+                                        } else if (img.id === "georgia") {
+                                            img.src = "info_panels/georgia_info.png";
+                                        } else if (img.id === "germany") {
+                                            img.src = "info_panels/germany_info.png";
+                                        } else if (img.id === "ghana") {
+                                            img.src = "info_panels/ghana_info.png";
+                                        } else if (img.id === "greece") {
+                                            img.src = "info_panels/greece_info.png";
+                                        } else if (img.id === "grenada") {
+                                            img.src = "info_panels/grenada_info.png";
+                                        } else if (img.id === "guatemala") {
+                                            img.src = "info_panels/guatemala_info.png";
+                                        } else if (img.id === "guinea_bissau") {
+                                            img.src = "info_panels/guinea_bissau_info.png";
+                                        } else if (img.id === "guinea") {
+                                            img.src = "info_panels/guinea_info.png";
+                                        } else if (img.id === "guyana") {
+                                            img.src = "info_panels/guyana_info.png";
+                                        } else if (img.id === "haiti") {
+                                            img.src = "info_panels/haiti_info.png";
+                                        } else if (img.id === "honduras") {
+                                            img.src = "info_panels/honduras_info.png";
+                                        } else if (img.id === "hungary") {
+                                            img.src = "info_panels/hungary_info.png";
+                                        } else if (img.id === "iceland") {
+                                            img.src = "info_panels/iceland_info.png";
+                                        } else if (img.id === "india") {
+                                            img.src = "info_panels/india_info.png";
+                                        } else if (img.id === "indonesia") {
+                                            img.src = "info_panels/indonesia_info.png";
+                                        } else if (img.id === "iran") {
+                                            img.src = "info_panels/iran_info.png";
+                                        } else if (img.id === "iraq") {
+                                            img.src = "info_panels/iraq_info.png";
+                                        } else if (img.id === "ireland") {
+                                            img.src = "info_panels/ireland_info.png";
+                                        } else if (img.id === "israel") {
+                                            img.src = "info_panels/israel_info.png";
+                                        } else if (img.id === "italy") {
+                                            img.src = "info_panels/italy_info.png";
+                                        } else if (img.id === "ivory_coast") {
+                                            img.src = "info_panels/ivory_coast_info.png";
+                                        } else if (img.id === "jamaica") {
+                                            img.src = "info_panels/jamaica_info.png";
+                                        } else if (img.id === "japan") {
+                                            img.src = "info_panels/japan_info.png";
+                                        } else if (img.id === "jordan") {
+                                            img.src = "info_panels/jordan_info.png";
+                                        } else if (img.id === "kazakhstan") {
+                                            img.src = "info_panels/kazakhstan_info.png";
+                                        } else if (img.id === "kenya") {
+                                            img.src = "info_panels/kenya_info.png";
+                                        } else if (img.id === "kiribati") {
+                                            img.src = "info_panels/kiribati_info.png";
+                                        } else if (img.id === "kuwait") {
+                                            img.src = "info_panels/kuwait_info.png";
+                                        } else if (img.id === "kyrgyzstan") {
+                                            img.src = "info_panels/kyrgyzstan_info.png";
+                                        } else if (img.id === "laos") {
+                                            img.src = "info_panels/laos_info.png";
+                                        } else if (img.id === "latvia") {
+                                            img.src = "info_panels/latvia_info.png";
+                                        } else if (img.id === "lebanon") {
+                                            img.src = "info_panels/lebanon_info.png";
+                                        } else if (img.id === "lesotho") {
+                                            img.src = "info_panels/lesotho_info.png";
+                                        } else if (img.id === "liberia") {
+                                            img.src = "info_panels/liberia_info.png";
+                                        } else if (img.id === "libya") {
+                                            img.src = "info_panels/libya_info.png";
+                                        } else if (img.id === "liechtenstein") {
+                                            img.src = "info_panels/liechtenstein_info.png";
+                                        } else if (img.id === "lithuania") {
+                                            img.src = "info_panels/lithuania_info.png";
+                                        } else if (img.id === "luxembourg") {
+                                            img.src = "info_panels/luxembourg_info.png";
+                                        } else if (img.id === "madagascar") {
+                                            img.src = "info_panels/madagascar_info.png";
+                                        } else if (img.id === "malawi") {
+                                            img.src = "info_panels/malawi_info.png";
+                                        } else if (img.id === "malaysia") {
+                                            img.src = "info_panels/malaysia_info.png";
+                                        } else if (img.id === "maldives") {
+                                            img.src = "info_panels/maldives_info.png";
+                                        } else if (img.id === "mali") {
+                                            img.src = "info_panels/mali_info.png";
+                                        } else if (img.id === "malta") {
+                                            img.src = "info_panels/malta_info.png";
+                                        } else if (img.id === "marshall_islands") {
+                                            img.src = "info_panels/marshall_islands_info.png";
+                                        } else if (img.id === "mauritania") {
+                                            img.src = "info_panels/mauritania_info.png";
+                                        } else if (img.id === "mauritius") {
+                                            img.src = "info_panels/mauritius_info.png";
+                                        } else if (img.id === "mexico") {
+                                            img.src = "info_panels/mexico_info.png";
+                                        } else if (img.id === "micronesia") {
+                                            img.src = "info_panels/micronesia_info.png";
+                                        } else if (img.id === "moldova") {
+                                            img.src = "info_panels/moldova_info.png";
+                                        } else if (img.id === "monaco") {
+                                            img.src = "info_panels/monaco_info.png";
+                                        } else if (img.id === "mongolia") {
+                                            img.src = "info_panels/mongolia_info.png";
+                                        } else if (img.id === "montenegro") {
+                                            img.src = "info_panels/montenegro_info.png";
+                                        } else if (img.id === "morocco") {
+                                            img.src = "info_panels/morocco_info.png";
+                                        } else if (img.id === "mozambique") {
+                                            img.src = "info_panels/mozambique_info.png";
+                                        } else if (img.id === "myanmar") {
+                                            img.src = "info_panels/myanmar_info.png";
+                                        } else if (img.id === "namibia") {
+                                            img.src = "info_panels/namibia_info.png";
+                                        } else if (img.id === "nauru") {
+                                            img.src = "info_panels/nauru_info.png";
+                                        } else if (img.id === "nepal") {
+                                            img.src = "info_panels/nepal_info.png";
+                                        } else if (img.id === "netherlands") {
+                                            img.src = "info_panels/netherlands_info.png";
+                                        } else if (img.id === "new_zealand") {
+                                            img.src = "info_panels/new_zealand_info.png";
+                                        } else if (img.id === "nicaragua") {
+                                            img.src = "info_panels/nicaragua_info.png";
+                                        } else if (img.id === "niger") {
+                                            img.src = "info_panels/niger_info.png";
+                                        } else if (img.id === "nigeria") {
+                                            img.src = "info_panels/nigeria_info.png";
+                                        } else if (img.id === "north_korea") {
+                                            img.src = "info_panels/north_korea_info.png";
+                                        } else if (img.id === "north_macedonia") {
+                                            img.src = "info_panels/north_macedonia_info.png";
+                                        } else if (img.id === "norway") {
+                                            img.src = "info_panels/norway_info.png";
+                                        } else if (img.id === "oman") {
+                                            img.src = "info_panels/oman_info.png";
+                                        } else if (img.id === "pakistan") {
+                                            img.src = "info_panels/pakistan_info.png";
+                                        } else if (img.id === "palau") {
+                                            img.src = "info_panels/palau_info.png";
+                                        } else if (img.id === "palestine") {
+                                            img.src = "info_panels/palestine_info.png";
+                                        } else if (img.id === "panama") {
+                                            img.src = "info_panels/panama_info.png";
+                                        } else if (img.id === "papua_new_guinea") {
+                                            img.src = "info_panels/papua_new_guinea_info.png";
+                                        } else if (img.id === "paraguay") {
+                                            img.src = "info_panels/paraguay_info.png";
+                                        } else if (img.id === "peru") {
+                                            img.src = "info_panels/peru_info.png";
+                                        } else if (img.id === "philippines") {
+                                            img.src = "info_panels/philippines_info.png";
+                                        } else if (img.id === "poland") {
+                                            img.src = "info_panels/poland_info.png";
+                                        } else if (img.id === "portugal") {
+                                            img.src = "info_panels/portugal_info.png";
+                                        } else if (img.id === "qatar") {
+                                            img.src = "info_panels/qatar_info.png";
+                                        } else if (img.id === "romania") {
+                                            img.src = "info_panels/romania_info.png";
+                                        } else if (img.id === "russia") {
+                                            img.src = "info_panels/russia_info.png";
+                                        } else if (img.id === "rwanda") {
+                                            img.src = "info_panels/rwanda_info.png";
+                                        } else if (img.id === "saint_kitts_and_nevis") {
+                                            img.src = "info_panels/saint_kitts_and_nevis_info.png";
+                                        } else if (img.id === "saint_lucia") {
+                                            img.src = "info_panels/saint_lucia_info.png";
+                                        } else if (img.id === "saint_vincent_and_the_grenadines") {
+                                            img.src = "info_panels/saint_vincent_and_the_grenadines_info.png";
+                                        } else if (img.id === "samoa") {
+                                            img.src = "info_panels/samoa_info.png";
+                                        } else if (img.id === "san_marino") {
+                                            img.src = "info_panels/san_marino_info.png";
+                                        } else if (img.id === "sao_tome_and_principe") {
+                                            img.src = "info_panels/sao_tome_and_principe_info.png";
+                                        } else if (img.id === "saudi_arabia") {
+                                            img.src = "info_panels/saudi_arabia_info.png";
+                                        } else if (img.id === "senegal") {
+                                            img.src = "info_panels/senegal_info.png";
+                                        } else if (img.id === "serbia") {
+                                            img.src = "info_panels/serbia_info.png";
+                                        } else if (img.id === "seychelles") {
+                                            img.src = "info_panels/seychelles_info.png";
+                                        } else if (img.id === "sierra_leone") {
+                                            img.src = "info_panels/sierra_leone_info.png";
+                                        } else if (img.id === "singapore") {
+                                            img.src = "info_panels/singapore_info.png";
+                                        } else if (img.id === "slovakia") {
+                                            img.src = "info_panels/slovakia_info.png";
+                                        } else if (img.id === "slovenia") {
+                                            img.src = "info_panels/slovenia_info.png";
+                                        } else if (img.id === "solomon_islands") {
+                                            img.src = "info_panels/solomon_islands_info.png";
+                                        } else if (img.id === "somalia") {
+                                            img.src = "info_panels/somalia_info.png";
+                                        } else if (img.id === "south_africa") {
+                                            img.src = "info_panels/south_africa_info.png";
+                                        } else if (img.id === "south_korea") {
+                                            img.src = "info_panels/south_korea_info.png";
+                                        } else if (img.id === "south_sudan") {
+                                            img.src = "info_panels/south_sudan_info.png";
+                                        } else if (img.id === "spain") {
+                                            img.src = "info_panels/spain_info.png";
+                                        } else if (img.id === "sri_lanka") {
+                                            img.src = "info_panels/sri_lanka_info.png";
+                                        } else if (img.id === "sudan") {
+                                            img.src = "info_panels/sudan_info.png";
+                                        } else if (img.id === "suriname") {
+                                            img.src = "info_panels/suriname_info.png";
+                                        } else if (img.id === "sweden") {
+                                            img.src = "info_panels/sweden_info.png";
+                                        } else if (img.id === "switzerland") {
+                                            img.src = "info_panels/switzerland_info.png";
+                                        } else if (img.id === "syria") {
+                                            img.src = "info_panels/syria_info.png";
+                                        } else if (img.id === "tajikistan") {
+                                            img.src = "info_panels/tajikistan_info.png";
+                                        } else if (img.id === "tanzania") {
+                                            img.src = "info_panels/tanzania_info.png";
+                                        } else if (img.id === "thailand") {
+                                            img.src = "info_panels/thailand_info.png";
+                                        } else if (img.id === "the_gambia") {
+                                            img.src = "info_panels/the_gambia_info.png";
+                                        } else if (img.id === "togo") {
+                                            img.src = "info_panels/togo_info.png";
+                                        } else if (img.id === "tonga") {
+                                            img.src = "info_panels/tonga_info.png";
+                                        } else if (img.id === "trinidad_and_tobago") {
+                                            img.src = "info_panels/trinidad_and_tobago_info.png";
+                                        } else if (img.id === "tunisia") {
+                                            img.src = "info_panels/tunisia_info.png";
+                                        } else if (img.id === "turkey") {
+                                            img.src = "info_panels/turkey_info.png";
+                                        } else if (img.id === "turkmenistan") {
+                                            img.src = "info_panels/turkmenistan_info.png";
+                                        } else if (img.id === "tuvalu") {
+                                            img.src = "info_panels/tuvalu_info.png";
+                                        } else if (img.id === "uganda") {
+                                            img.src = "info_panels/uganda_info.png";
+                                        } else if (img.id === "ukraine") {
+                                            img.src = "info_panels/ukraine_info.png";
+                                        } else if (img.id === "united_arab_emirates") {
+                                            img.src = "info_panels/united_arab_emirates_info.png";
+                                        } else if (img.id === "united_kingdom") {
+                                            img.src = "info_panels/united_kingdom_info.png";
+                                        } else if (img.id === "uruguay") {
+                                            img.src = "info_panels/uruguay_info.png";
+                                        } else if (img.id === "usa") {
+                                            img.src = "info_panels/usa_info.png";
+                                        } else if (img.id === "uzbekistan") {
+                                            img.src = "info_panels/uzbekistan_info.png";
+                                        } else if (img.id === "vanuatu") {
+                                            img.src = "info_panels/vanuatu_info.png";
+                                        } else if (img.id === "vatican_city") {
+                                            img.src = "info_panels/vatican_city_info.png";
+                                        } else if (img.id === "venezuela") {
+                                            img.src = "info_panels/venezuela_info.png";
+                                        } else if (img.id === "vietnam") {
+                                            img.src = "info_panels/vietnam_info.png";
+                                        } else if (img.id === "yemen") {
+                                            img.src = "info_panels/yemen_info.png";
+                                        } else if (img.id === "zambia") {
+                                            img.src = "info_panels/zambia_info.png";
+                                        } else if (img.id === "zimbabwe") {
+                                            img.src = "info_panels/zimbabwe_info.png";
+                                        }
+                                    }, 400);
+                                });
+
+                                //this is the exiting ahhhh
+                                img.addEventListener("mouseleave", (e) => {
+                                    setTimeout(() => {
+                                        if (img.id === "afghanistan") {
+                                            img.src = "flags images/afghanistan.png";
+                                        } else if (img.id === "albania") {
+                                            img.src = "flags images/albania.png";
+                                        } else if (img.id === "algeria") {
+                                            img.src = "flags images/algeria.png";
+                                        }else if (img.id === "andorra") {
+                                            img.src = "flags images/andorra.png";
+                                        } else if (img.id === "angola") {
+                                            img.src = "flags images/angola.png";
+                                        } else if (img.id === "antigua_and_barbuda") {
+                                            img.src = "flags images/antigua_and_barbuda.png";
+                                        } else if (img.id === "argentina") {
+                                            img.src = "flags images/argentina.png";
+                                        } else if (img.id === "australia") {
+                                            img.src = "flags images/australia.png";
+                                        } else if (img.id === "armenia") {
+                                            img.src = "flags images/armenia.png";
+                                        } else if (img.id === "austria") {
+                                            img.src = "flags images/austria.png";
+                                        } else if (img.id === "azerbaijan") {
+                                            img.src = "flags images/azerbaijan.png";
+                                        } else if (img.id === "bahamas") {
+                                            img.src = "flags images/bahamas.png";
+                                        } else if (img.id === "bahrain") {
+                                            img.src = "flags images/bahrain.png";
+                                        } else if (img.id === "bangladesh") {
+                                            img.src = "flags images/bangladesh.png";
+                                        } else if (img.id === "barbados") {
+                                            img.src = "flags images/barbados.png";
+                                        } else if (img.id === "belarus") {
+                                            img.src = "flags images/belarus.png";
+                                        } else if (img.id === "belgium") {
+                                            img.src = "flags images/belgium.png";
+                                        } else if (img.id === "belize") {
+                                            img.src = "flags images/belize.png";
+                                        } else if (img.id === "benin") {
+                                            img.src = "flags images/benin.png";
+                                        } else if (img.id === "bhutan") {
+                                            img.src = "flags images/bhutan.png";
+                                        } else if (img.id === "bolivia") {
+                                            img.src = "flags images/bolivia.png";
+                                        } else if (img.id === "bosnia_and_herzegovina") {
+                                            img.src = "flags images/bosnia_and_herzegovina.png";
+                                        } else if (img.id === "botswana") {
+                                            img.src = "flags images/botswana.png";
+                                        } else if (img.id === "brazil") {
+                                            img.src = "flags images/brazil.png";
+                                        } else if (img.id === "brunei") {
+                                            img.src = "flags images/brunei.png";
+                                        } else if (img.id === "bulgaria") {
+                                            img.src = "flags images/bulgaria.png";
+                                        } else if (img.id === "burkina_faso") {
+                                            img.src = "flags images/burkina_faso.png";
+                                        } else if (img.id === "burundi") {
+                                            img.src = "flags images/burundi.png";
+                                        } else if (img.id === "cabo_verde") {
+                                            img.src = "flags images/cabo_verde.png";
+                                        } else if (img.id === "cambodia") {
+                                            img.src = "flags images/cambodia.png";
+                                        } else if (img.id === "cameroon") {
+                                            img.src = "flags images/cameroon.png";
+                                        } else if (img.id === "canada") {
+                                            img.src = "flags images/canada.png";
+                                        } else if (img.id === "central_african_republic") {
+                                            img.src = "flags images/central_african_republic.png";
+                                        } else if (img.id === "chad") {
+                                            img.src = "flags images/chad.png";
+                                        } else if (img.id === "chile") {
+                                            img.src = "flags images/chile.png";
+                                        } else if (img.id === "china") {
+                                            img.src = "flags images/china.png";
+                                        } else if (img.id === "colombia") {
+                                            img.src = "flags images/colombia.png";
+                                        } else if (img.id === "comoros") {
+                                            img.src = "flags images/comoros.png";
+                                        } else if (img.id === "democratic_republic_of_the_congo") {
+                                            img.src = "flags images/democratic_republic_of_the_congo.png";
+                                        } else if (img.id === "congo") {
+                                            img.src = "flags images/congo.png";
+                                        } else if (img.id === "costa_rica") {
+                                            img.src = "flags images/costa_rica.png";
+                                        } else if (img.id === "croatia") {
+                                            img.src = "flags images/croatia.png";
+                                        } else if (img.id === "cuba") {
+                                            img.src = "flags images/cuba.png";
+                                        } else if (img.id === "cyprus") {
+                                            img.src = "flags images/cyprus.png";
+                                        } else if (img.id === "czechia") {
+                                            img.src = "flags images/czechia.png";
+                                        } else if (img.id === "denmark") {
+                                            img.src = "flags images/denmark.png";
+                                        } else if (img.id === "djibouti") {
+                                            img.src = "flags images/djibouti.png";
+                                        } else if (img.id === "dominica") {
+                                            img.src = "flags images/dominica.png";
+                                        } else if (img.id === "dominican_republic") {
+                                            img.src = "flags images/dominican_republic.png";
+                                        } else if (img.id === "east_timor") {
+                                            img.src = "flags images/east_timor.png";
+                                        } else if (img.id === "ecuador") {
+                                            img.src = "flags images/ecuador.png";
+                                        } else if (img.id === "egypt") {
+                                            img.src = "flags images/egypt.png";
+                                        } else if (img.id === "el_salvador") {
+                                            img.src = "flags images/el_salvador.png";
+                                        } else if (img.id === "equitorial_guinea") {
+                                            img.src = "flags images/equitorial_guinea.png";
+                                        } else if (img.id === "eritrea") {
+                                            img.src = "flags images/eritrea.png";
+                                        } else if (img.id === "estonia") {
+                                            img.src = "flags images/estonia.png";
+                                        } else if (img.id === "eswatini") {
+                                            img.src = "flags images/eswatini.png";
+                                        } else if (img.id === "ethiopia") {
+                                            img.src = "flags images/ethiopia.png";
+                                        } else if (img.id === "fiji") {
+                                            img.src = "flags images/fiji.png";
+                                        } else if (img.id === "finland") {
+                                            img.src = "flags images/finland.png";
+                                        } else if (img.id === "france") {
+                                            img.src = "flags images/france.png";
+                                        } else if (img.id === "gabon") {
+                                            img.src = "flags images/gabon.png";
+                                        } else if (img.id === "georgia") {
+                                            img.src = "flags images/georgia.png";
+                                        } else if (img.id === "germany") {
+                                            img.src = "flags images/germany.png";
+                                        } else if (img.id === "ghana") {
+                                            img.src = "flags images/ghana.png";
+                                        } else if (img.id === "greece") {
+                                            img.src = "flags images/greece.png";
+                                        } else if (img.id === "grenada") {
+                                            img.src = "flags images/grenada.png";
+                                        } else if (img.id === "guatemala") {
+                                            img.src = "flags images/guatemala.png";
+                                        } else if (img.id === "guinea_bissau") {
+                                            img.src = "flags images/guinea_bissau.png";
+                                        } else if (img.id === "guinea") {
+                                            img.src = "flags images/guinea.png";
+                                        } else if (img.id === "guyana") {
+                                            img.src = "flags images/guyana.png";
+                                        } else if (img.id === "haiti") {
+                                            img.src = "flags images/haiti.png";
+                                        } else if (img.id === "honduras") {
+                                            img.src = "flags images/honduras.png";
+                                        } else if (img.id === "hungary") {
+                                            img.src = "flags images/hungary.png";
+                                        } else if (img.id === "iceland") {
+                                            img.src = "flags images/iceland.png";
+                                        } else if (img.id === "india") {
+                                            img.src = "flags images/india.png";
+                                        } else if (img.id === "indonesia") {
+                                            img.src = "flags images/indonesia.png";
+                                        } else if (img.id === "iran") {
+                                            img.src = "flags images/iran.png";
+                                        } else if (img.id === "iraq") {
+                                            img.src = "flags images/iraq.png";
+                                        } else if (img.id === "ireland") {
+                                            img.src = "flags images/ireland.png";
+                                        } else if (img.id === "israel") {
+                                            img.src = "flags images/israel.png";
+                                        } else if (img.id === "italy") {
+                                            img.src = "flags images/italy.png";
+                                        } else if (img.id === "ivory_coast") {
+                                            img.src = "flags images/ivory_coast.png";
+                                        } else if (img.id === "jamaica") {
+                                            img.src = "flags images/jamaica.jpeg";
+                                        } else if (img.id === "japan") {
+                                            img.src = "flags images/japan.png";
+                                        } else if (img.id === "jordan") {
+                                            img.src = "flags images/jordan.png";
+                                        } else if (img.id === "kazakhstan") {
+                                            img.src = "flags images/kazakhstan.png";
+                                        } else if (img.id === "kenya") {
+                                            img.src = "flags images/kenya.png";
+                                        } else if (img.id === "kiribati") {
+                                            img.src = "flags images/kiribati.png";
+                                        } else if (img.id === "kuwait") {
+                                            img.src = "flags images/kuwait.png";
+                                        } else if (img.id === "kyrgyzstan") {
+                                            img.src = "flags images/kyrgyzstan.png";
+                                        } else if (img.id === "laos") {
+                                            img.src = "flags images/laos.png";
+                                        } else if (img.id === "latvia") {
+                                            img.src = "flags images/latvia.png";
+                                        } else if (img.id === "lebanon") {
+                                            img.src = "flags images/lebanon.png";
+                                        } else if (img.id === "lesotho") {
+                                            img.src = "flags images/lesotho.png";
+                                        } else if (img.id === "liberia") {
+                                            img.src = "flags images/liberia.png";
+                                        } else if (img.id === "libya") {
+                                            img.src = "flags images/libya.png";
+                                        } else if (img.id === "liechtenstein") {
+                                            img.src = "flags images/liechtenstein.png";
+                                        } else if (img.id === "lithuania") {
+                                            img.src = "flags images/lithuania.png";
+                                        } else if (img.id === "luxembourg") {
+                                            img.src = "flags images/luxembourg.png";
+                                        } else if (img.id === "madagascar") {
+                                            img.src = "flags images/madagascar.png";
+                                        } else if (img.id === "malawi") {
+                                            img.src = "flags images/malawi.png";
+                                        } else if (img.id === "malaysia") {
+                                            img.src = "flags images/malaysia.png";
+                                        } else if (img.id === "maldives") {
+                                            img.src = "flags images/maldives.png";
+                                        } else if (img.id === "mali") {
+                                            img.src = "flags images/mali.png";
+                                        } else if (img.id === "malta") {
+                                            img.src = "flags images/malta.png";
+                                        } else if (img.id === "marshall_islands") {
+                                            img.src = "flags images/marshall_islands.png";
+                                        } else if (img.id === "mauritania") {
+                                            img.src = "flags images/mauritania.png";
+                                        } else if (img.id === "mauritius") {
+                                            img.src = "flags images/mauritius.png";
+                                        } else if (img.id === "mexico") {
+                                            img.src = "flags images/mexico.png";
+                                        } else if (img.id === "micronesia") {
+                                            img.src = "flags images/micronesia.png";
+                                        } else if (img.id === "moldova") {
+                                            img.src = "flags images/moldova.png";
+                                        } else if (img.id === "monaco") {
+                                            img.src = "flags images/monaco.png";
+                                        } else if (img.id === "mongolia") {
+                                            img.src = "flags images/mongolia.png";
+                                        } else if (img.id === "montenegro") {
+                                            img.src = "flags images/montenegro.png";
+                                        } else if (img.id === "morocco") {
+                                            img.src = "flags images/morocco.png";
+                                        } else if (img.id === "mozambique") {
+                                            img.src = "flags images/mozambique.png";
+                                        } else if (img.id === "myanmar") {
+                                            img.src = "flags images/myanmar.png";
+                                        } else if (img.id === "namibia") {
+                                            img.src = "flags images/namibia.png";
+                                        } else if (img.id === "nauru") {
+                                            img.src = "flags images/nauru.png";
+                                        } else if (img.id === "nepal") {
+                                            img.src = "flags images/nepal.png";
+                                        } else if (img.id === "netherlands") {
+                                            img.src = "flags images/netherlands.png";
+                                        } else if (img.id === "new_zealand") {
+                                            img.src = "flags images/new_zealand.png";
+                                        } else if (img.id === "nicaragua") {
+                                            img.src = "flags images/nicaragua.png";
+                                        } else if (img.id === "niger") {
+                                            img.src = "flags images/niger.png";
+                                        } else if (img.id === "nigeria") {
+                                            img.src = "flags images/nigeria.png";
+                                        } else if (img.id === "north_korea") {
+                                            img.src = "flags images/north_korea.png";
+                                        } else if (img.id === "north_macedonia") {
+                                            img.src = "flags images/north_macedonia.png";
+                                        } else if (img.id === "norway") {
+                                            img.src = "flags images/norway.png";
+                                        } else if (img.id === "oman") {
+                                            img.src = "flags images/oman.png";
+                                        } else if (img.id === "pakistan") {
+                                            img.src = "flags images/pakistan.png";
+                                        } else if (img.id === "palau") {
+                                            img.src = "flags images/palau.png";
+                                        } else if (img.id === "palestine") {
+                                            img.src = "flags images/palestine.png";
+                                        } else if (img.id === "panama") {
+                                            img.src = "flags images/panama.png";
+                                        } else if (img.id === "papua_new_guinea") {
+                                            img.src = "flags images/papua_new_guinea.png";
+                                        } else if (img.id === "paraguay") {
+                                            img.src = "flags images/paraguay.png";
+                                        } else if (img.id === "peru") {
+                                            img.src = "flags images/peru.png";
+                                        } else if (img.id === "philippines") {
+                                            img.src = "flags images/philippines.png";
+                                        } else if (img.id === "poland") {
+                                            img.src = "flags images/poland.png";
+                                        } else if (img.id === "portugal") {
+                                            img.src = "flags images/portugal.png";
+                                        } else if (img.id === "qatar") {
+                                            img.src = "flags images/qatar.png";
+                                        } else if (img.id === "romania") {
+                                            img.src = "flags images/romania.png";
+                                        } else if (img.id === "russia") {
+                                            img.src = "flags images/russia.png";
+                                        } else if (img.id === "rwanda") {
+                                            img.src = "flags images/rwanda.png";
+                                        } else if (img.id === "saint_kitts_and_nevis") {
+                                            img.src = "flags images/saint_kitts_and_nevis.png";
+                                        } else if (img.id === "saint_lucia") {
+                                            img.src = "flags images/saint_lucia.png";
+                                        } else if (img.id === "saint_vincent_and_the_grenadines") {
+                                            img.src = "flags images/saint_vincent_and_the_grenadines.png";
+                                        } else if (img.id === "samoa") {
+                                            img.src = "flags images/samoa.png";
+                                        } else if (img.id === "san_marino") {
+                                            img.src = "flags images/san_marino.png";
+                                        } else if (img.id === "sao_tome_and_principe") {
+                                            img.src = "flags images/sao_tome_and_principe.png";
+                                        } else if (img.id === "saudi_arabia") {
+                                            img.src = "flags images/saudi_arabia.png";
+                                        } else if (img.id === "senegal") {
+                                            img.src = "flags images/senegal.png";
+                                        } else if (img.id === "serbia") {
+                                            img.src = "flags images/serbia.png";
+                                        } else if (img.id === "seychelles") {
+                                            img.src = "flags images/seychelles.png";
+                                        } else if (img.id === "sierra_leone") {
+                                            img.src = "flags images/sierra_leone.png";
+                                        } else if (img.id === "singapore") {
+                                            img.src = "flags images/singapore.png";
+                                        } else if (img.id === "slovakia") {
+                                            img.src = "flags images/slovakia.png";
+                                        } else if (img.id === "slovenia") {
+                                            img.src = "flags images/slovenia.png";
+                                        } else if (img.id === "solomon_islands") {
+                                            img.src = "flags images/solomon_islands.png";
+                                        } else if (img.id === "somalia") {
+                                            img.src = "flags images/somalia.png";
+                                        } else if (img.id === "south_africa") {
+                                            img.src = "flags images/south_africa.png";
+                                        } else if (img.id === "south_korea") {
+                                            img.src = "flags images/south_korea.png";
+                                        } else if (img.id === "south_sudan") {
+                                            img.src = "flags images/south_sudan.png";
+                                        } else if (img.id === "spain") {
+                                            img.src = "flags images/spain.png";
+                                        } else if (img.id === "sri_lanka") {
+                                            img.src = "flags images/sri_lanka.png";
+                                        } else if (img.id === "sudan") {
+                                            img.src = "flags images/sudan.png";
+                                        } else if (img.id === "suriname") {
+                                            img.src = "flags images/suriname.png";
+                                        } else if (img.id === "sweden") {
+                                            img.src = "flags images/sweden.png";
+                                        } else if (img.id === "switzerland") {
+                                            img.src = "flags images/switzerland.png";
+                                        } else if (img.id === "syria") {
+                                            img.src = "flags images/syria.png";
+                                        } else if (img.id === "tajikistan") {
+                                            img.src = "flags images/tajikistan.png";
+                                        } else if (img.id === "tanzania") {
+                                            img.src = "flags images/tanzania.png";
+                                        } else if (img.id === "thailand") {
+                                            img.src = "flags images/thailand.png";
+                                        } else if (img.id === "the_gambia") {
+                                            img.src = "flags images/the_gambia.png";
+                                        } else if (img.id === "togo") {
+                                            img.src = "flags images/togo.png";
+                                        } else if (img.id === "tonga") {
+                                            img.src = "flags images/tonga.png";
+                                        } else if (img.id === "trinidad_and_tobago") {
+                                            img.src = "flags images/trinidad_and_tobago.png";
+                                        } else if (img.id === "tunisia") {
+                                            img.src = "flags images/tunisia.png";
+                                        } else if (img.id === "turkey") {
+                                            img.src = "flags images/turkey.png";
+                                        } else if (img.id === "turkmenistan") {
+                                            img.src = "flags images/turkmenistan.png";
+                                        } else if (img.id === "tuvalu") {
+                                            img.src = "flags images/tuvalu.png";
+                                        } else if (img.id === "uganda") {
+                                            img.src = "flags images/uganda.png";
+                                        } else if (img.id === "ukraine") {
+                                            img.src = "flags images/ukraine.png";
+                                        } else if (img.id === "united_arab_emirates") {
+                                            img.src = "flags images/united_arab_emirates.png";
+                                        } else if (img.id === "united_kingdom") {
+                                            img.src = "flags images/united_kingdom.png";
+                                        } else if (img.id === "uruguay") {
+                                            img.src = "flags images/uruguay.png";
+                                        } else if (img.id === "usa") {
+                                            img.src = "flags images/usa.png";
+                                        } else if (img.id === "uzbekistan") {
+                                            img.src = "flags images/uzbekistan.png";
+                                        } else if (img.id === "vanuatu") {
+                                            img.src = "flags images/vanuatu.png";
+                                        } else if (img.id === "vatican_city") {
+                                            img.src = "flags images/vatican_city.png";
+                                        } else if (img.id === "venezuela") {
+                                            img.src = "flags images/venezuela.png";
+                                        } else if (img.id === "vietnam") {
+                                            img.src = "flags images/vietnam.png";
+                                        } else if (img.id === "yemen") {
+                                            img.src = "flags images/yemen.png";
+                                        } else if (img.id === "zambia") {
+                                            img.src = "flags images/zambia.png";
+                                        } else if (img.id === "zimbabwe") {
+                                            img.src = "flags images/zimbabwe.png";
+                                        }
+                                        
+                                        img.style.width = "100px";
+                                        img.style.height = "auto";
+                                    }, 1000);
+                                });
+
+                                container.appendChild(img);
+                            }
+                        });
+                    }
+
+            </script>  
+            <br><br>
+            <div class="section2_container">
+                <section class="section2_section_title">What about the Other Flags?</section>
+                <section></section>
+                <section class="section2_section_paragraph">There are SO many flags in the world that it's impossible to put them onto one website made in such a short period of time like this one, but just because their not here it doesn't mean that other flags don't exist! There are provinces, states, territories, cities, counties, etc that all have their own and mostly unique flags.</section>
+                <div class="section2_sections_img">
+                    <img src="50 states.jpg" alt="50 state flags" width="500" height="300">
+                </div>   
+            </div>
+            <svg class="bottomsvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#273036" fill-opacity="1" d="M0,224L48,229.3C96,235,192,245,288,213.3C384,181,480,107,576,101.3C672,96,768,160,864,186.7C960,213,1056,203,1152,192C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>              
+    </body>
+</html>
